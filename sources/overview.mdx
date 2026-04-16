@@ -1,0 +1,78 @@
+---
+title: "Signal sources: where BuilderPulse gets its data"
+description: "BuilderPulse cross-references 6 sources daily to surface high-confidence opportunities — signals validated across platforms, never based on a single source."
+---
+
+Every BuilderPulse report synthesizes signals from six distinct platforms — Hacker News, GitHub Trending, Google Trends, Product Hunt, HuggingFace, and Reddit. No single source tells the full story. A project can top GitHub Trending while going unnoticed on Product Hunt. A search term can surge on Google while the underlying product has zero HN discussion. The strength of a signal is determined by how many independent sources corroborate it — and that cross-validation is what separates a genuine opportunity from noise.
+
+## The six sources
+
+<CardGroup cols={2}>
+  <Card title="Hacker News" icon="newspaper" href="/sources/hacker-news">
+    Show HN launches, top comment sentiment, pain points in 500-point threads, and the developer community's unfiltered opinions on what's broken and what's promising.
+  </Card>
+  <Card title="GitHub Trending" icon="code-branch" href="/sources/github-trending">
+    Weekly star velocity for fast-growing repos — with a focus on projects that have no commercial version yet, where the builder opportunity is widest.
+  </Card>
+  <Card title="Google Trends" icon="chart-line" href="/sources/google-trends">
+    7-day and 3-month search windows that reveal which terms are emerging from zero, which are peaking, and which are cooling — before the crowd notices.
+  </Card>
+  <Card title="Product Hunt" icon="rocket" href="/sources/product-hunt">
+    Vote counts and comment patterns that validate consumer demand, with special attention to dev tool launches that also appear on GitHub and HN.
+  </Card>
+  <Card title="HuggingFace" icon="robot" href="/sources/huggingface">
+    Trending model scores and download counts that surface AI capabilities builders can wrap into consumer products — before those capabilities are commoditized.
+  </Card>
+  <Card title="Reddit" icon="comments" href="/sources/reddit">
+    Revenue milestones, pricing pivots, and churn postmortems from r/SaaS, r/SideProject, and r/indiehackers — the most candid revenue data available anywhere.
+  </Card>
+</CardGroup>
+
+## How multi-source cross-validation works
+
+A signal that appears in one source is a data point. A signal that appears in three or more independent sources is a high-confidence opportunity.
+
+The logic is straightforward: each platform has a different audience with different incentives. GitHub star counts reflect developer interest. HN points reflect the technical community's quality assessment. Google search volume reflects actual end-user curiosity. Product Hunt votes reflect early adopter demand. When these audiences converge on the same topic without coordination, you're seeing real market movement.
+
+<Note>
+BuilderPulse labels signals as **high-confidence** when they appear in three or more sources simultaneously. These are the signals most likely to represent durable demand rather than a one-day spike.
+</Note>
+
+### A real example: "claude managed agents" (April 13–16, 2026)
+
+This signal appeared across every source in the same week:
+
+- **Google Trends**: "claude managed agents" surged +3,750% from near-zero — a content vacuum signal
+- **GitHub Trending**: NousResearch/hermes-agent hit 38,426 weekly stars (site-wide #1), a related agent framework
+- **Hacker News**: Claude Code Routines scored 700 points and 401 comments — the highest for any company product launch that week
+- **Product Hunt**: Claude Code Routines topped the daily chart with 448 votes
+- **HuggingFace**: Multiple agent-oriented models appeared in the top 20 trending list
+
+Five independent sources pointing at the same emerging category in the same seven-day window. That's the kind of convergence that BuilderPulse is designed to surface before the opportunity is crowded.
+
+<Tip>
+When you see a signal validated across three or more sources in a single report, that's your highest-priority build opportunity for the week. Start there.
+</Tip>
+
+## How each source contributes
+
+<AccordionGroup>
+  <Accordion title="Hacker News — community sentiment and pain points">
+    HN tells you what developers care about enough to click, upvote, and argue in the comments. A 500-point story with 400 comments is a different signal from a 500-point story with 80 comments — the comment density reveals whether the audience is agreeing, debating, or identifying unmet needs. BuilderPulse extracts both the score and the qualitative sentiment.
+  </Accordion>
+  <Accordion title="GitHub Trending — velocity, not just popularity">
+    Absolute star counts don't tell you much. Weekly velocity does. A repo gaining 10,000 stars in a week is a breakout signal regardless of its total count. BuilderPulse focuses on the weekly delta — and specifically on repos with no commercial wrapper, where the commercialization gap is still open.
+  </Accordion>
+  <Accordion title="Google Trends — leading indicator of mainstream adoption">
+    Search volume is a proxy for real-world intent. When developers and founders start searching for a term that didn't exist last month, they're trying to understand something new. BuilderPulse uses a dual-window approach — 7-day for emerging terms, 3-month for sustained trends — to separate spikes from signals.
+  </Accordion>
+  <Accordion title="Product Hunt — consumer demand validation">
+    PH vote counts tell you whether an idea has an audience beyond developers. When a dev tool launch gets 400+ votes on Product Hunt *and* 500+ points on Hacker News in the same week, you have demand validated across two very different communities.
+  </Accordion>
+  <Accordion title="HuggingFace — AI capability radar">
+    The trending model list is a leading indicator of what AI-powered products will be possible in 3–6 months. BuilderPulse tracks trending scores and download counts to identify models that developers are actively experimenting with — the ones most likely to underpin the next wave of consumer products.
+  </Accordion>
+  <Accordion title="Reddit — revenue and pricing reality">
+    Reddit is where founders share the numbers they won't publish on a blog. Revenue milestones, pricing pivots, churn rates, and acquisition costs — posted in r/SaaS and r/indiehackers threads that rarely make it into tech press. BuilderPulse surfaces the posts with real data attached.
+  </Accordion>
+</AccordionGroup>

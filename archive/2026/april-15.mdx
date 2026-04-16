@@ -1,0 +1,124 @@
+---
+title: "April 15 2026: Backblaze failure and blockchain backdoors"
+description: "611 Hacker News comments on Backblaze's silent backup exclusions. WordPress plugins weaponized via Ethereum smart contracts. AI agent war accelerates."
+---
+
+Two trust crises dominated April 15 — one in backup software, one in the WordPress plugin ecosystem — while the AI agent infrastructure race continued to accelerate in the background. Backblaze's silent exclusion of OneDrive and Dropbox folders became the most-commented developer story of the day, and a supply chain attack using Ethereum smart contracts for command-and-control introduced a genuinely new threat vector that traditional domain takedowns cannot address.
+
+## Top 3 highlights
+
+<Note>
+**1. Someone spent six figures buying 30 WordPress plugins and planted backdoors using Ethereum smart contracts for command-and-control.** Traditional domain takedowns don't work because the attacker can update the smart contract to point to a new C2 domain at any time. The malware was dormant for 8 months before activation. WordPress.org's forced update neutralized the phone-home mechanism but did not clean the injected code from wp-config.php.
+</Note>
+
+<Note>
+**2. Backblaze silently stopped backing up OneDrive and Dropbox folders.** Users only discovered the gap when they tried to restore lost files. The post earned 1,005 points and 611 comments — the highest comment count of the day. @julianozen reported a family file that was unrecoverable after Dropbox overwrote it: "We had learned that this policy had changed a few months ago, and we were never notified." @mcherm summarized the damage: "Trust is somewhat difficult to earn, but easy to lose and nearly IMPOSSIBLE to regain."
+</Note>
+
+<Note>
+**3. "Claude managed agents" exploded +3,400% in Google search trends while NousResearch's hermes-agent gained 52,996 GitHub stars in one week.** The AI agent framework war escalated on every front: Figma for Agents topped Product Hunt with 451 votes, multica gained 9,823 weekly stars, and Claude Code Routines hit 500 points on Hacker News. The search term "claude managed agents" rose from near-zero to +3,400% — a content vacuum waiting to be filled.
+</Note>
+
+## Key signals this day
+
+<CardGroup cols={2}>
+  <Card title="Backblaze: 611 comments of fury" icon="hard-drive" href="https://rareese.com/posts/backblaze/">
+    The backup provider silently excluded cloud-synced folders. @AegirLeet reported encrypted VeraCrypt drives also excluded without notice. Users are migrating to restic, borg, and rclone.
+  </Card>
+  <Card title="Blockchain C2 infrastructure" icon="link" href="https://anchor.host/someone-bought-30-wordpress-plugins-and-planted-a-backdoor-in-all-of-them/">
+    The WordPress backdoor resolved its C2 domain through an Ethereum smart contract querying public blockchain RPC endpoints. This is a new attack vector that standard domain takedowns cannot stop.
+  </Card>
+  <Card title="boringBar pricing pivot in real time" icon="apple" href="https://boringbar.app/">
+    @a-ve launched a macOS dock replacement with subscription pricing, got immediate pushback from 296 commenters, and pivoted to a $40 perpetual license for 2 devices + 2 years of updates within hours. @sonofhans: "I have apps on Macs that are over 20 years old."
+  </Card>
+  <Card title="Hermes-agent: 53K stars, no SaaS layer" icon="star" href="https://github.com/NousResearch/hermes-agent">
+    52,996 stars gained in one week. NousResearch is a research lab, not a SaaS company. No hosted version, no pricing page. The "managed hermes-agent cloud" opportunity is explicitly unclaimed.
+  </Card>
+  <Card title="Servo 0.1.0 on crates.io" icon="rust" href="https://servo.org/blog/2026/04/13/servo-0.1.0-release/">
+    Mozilla's abandoned Rust browser engine reached a major milestone: it's now an embeddable Rust crate. 470 HN points. If you're building desktop apps, kiosk apps, or embedded browsers in Rust, this just became a viable dependency.
+  </Card>
+  <Card title="$228/month → $22K/month pipeline" icon="linkedin" href="https://www.reddit.com/r/SaaS/">
+    @Capable_Document3744 routes website visitors via RB2B → Clay → SalesRobot across 5 SDR accounts. 1,000 new leads per account per month, 16% reply rate. Total tool cost: $228/month.
+  </Card>
+</CardGroup>
+
+### The Backblaze trust collapse
+
+The story that generated 611 comments — the most-discussed post of the day — was methodical in documenting Backblaze's behavior. The company silently added exclusion rules that prevented backup of OneDrive, Dropbox, and VeraCrypt-encrypted directories without notifying customers. @klausa: "I've had Backblaze fail to restore a file. I pay for unlimited history... they offered me 3 months of credits. I do not trust my Backblaze backups anymore." The pattern: a product people paid for specifically because they trusted it, degraded silently.
+
+This is a textbook case for building a competitor. 611 angry Hacker News comments are a pre-built audience. A "Backblaze but transparent" personal backup service with explicit inclusion/exclusion logs and verified restore testing would have a ready market today.
+
+### LangAlpha: financial AI with a production stack
+
+[LangAlpha](https://github.com/ginlix-ai/langalpha) launched on Hacker News (120 points) as "Claude Code but for Wall Street" — an open-source Apache 2.0 investment research agent with persistent sandboxed workspaces, TradingView charts, and live market data. Stack: React 19 + FastAPI + Postgres + Redis. @neomantra, who maintains an OSS SDK for Databento market data, validated the core insight: "Having an API call drop a firehose of structured data into the context window was not very helpful." Structured financial data for AI consumption remains a largely unsolved problem.
+
+### Voice AI reaches consumer-ready quality
+
+Two major open-source TTS and voice cloning models trended simultaneously on HuggingFace: [VoxCPM2](https://huggingface.co/openbmb/VoxCPM2) (trending 630, 884 likes) and [OmniVoice](https://huggingface.co/k2-fsa/OmniVoice) (530,898 downloads). VoxCPM2 offers voice cloning and voice design via diffusion; OmniVoice handles zero-shot multilingual cloning. [Ghost Pepper](https://www.producthunt.com/products/ghost-pepper) on Product Hunt (177 votes) is already commercializing this — "100% local private AI for text-to-speech and meeting notes."
+
+## Tech radar
+
+**Backblaze silent downgrade.** Beyond the community backlash, this represents a material reduction in a paid service's value proposition. @AegirLeet: "At some point, Backblaze just silently stopped backing up my encrypted (VeraCrypt) drives. Just stopped working without any announcement, warning or notification."
+
+**WordPress closes 31 plugins** after the Flippa acquisition attack. The FAIR package manager project — a decentralized alternative that could have prevented this — recently shut down after the WordPress drama died down, per @spankalee.
+
+**Google announces "back button hijacking" spam penalty** (858 points, 486 comments). Sites that manipulate browser history to trap users will face search penalties.
+
+**Microsoft is renaming Copilot in Windows 11**, not removing it — the rebrand generated confusion that inflated engagement numbers.
+
+**OpenAI's $852B valuation faces investor scrutiny** amid strategy shifts.
+
+<Info>
+The self-hosting trend is accelerating across multiple product categories simultaneously. If you maintain an open-source project with a self-hosted option, now is the time to optimize your "self-hosted alternative to X" landing pages. Joplin and Logseq both hit Breakout status on Google Trends this week.
+</Info>
+
+## Build recommendation
+
+**Best 2-hour build: Backblaze Backup Audit CLI.**
+
+Build a Python CLI that reads Backblaze's exclusion rules from their documented XML config, walks the user's file tree, and outputs a report of "files you think are backed up but aren't." The audience — 611 commenters who are actively looking for solutions — is ready right now.
+
+Revenue path: $5/month hosted dashboard that monitors your backup coverage continuously and alerts you when new exclusions appear. The open-source CLI is the top-of-funnel; the hosted alert layer is the business.
+
+**Why this wins today:** the discussion is live. Posting your CLI to Hacker News while the 611-comment thread is still fresh gives you a built-in audience of angry users who have already articulated exactly what they want.
+
+**Weekend build: open-source social media scheduler.** Reddit user @Ok-Constant6488 validated this with real numbers — his girlfriend was paying $400/month for Sendible and Later to manage 6 clients. He built an alternative in 3 weeks with 12 API integrations, now running on a €10/month Hetzner VPS. A self-hosted scheduler with a one-time $49 license captures the long tail of small agencies tired of per-seat pricing.
+
+**Alternative weekend build: "Claude Managed Agents" explainer site.** Google Trends shows +3,400% for this term with zero quality content in search results. Build a static site on Vercel: "What are Claude Managed Agents? Complete Guide 2026" plus a framework comparison table (hermes-agent vs. multica vs. Archon) and an interactive "which agent framework should I use?" quiz. Andrej Karpathy's CLAUDE.md file proved a single markdown file can get 21,795 GitHub stars — a well-structured guide site can do better.
+
+<Tip>
+The boringBar pivot is the pricing lesson of the week. @a-ve launched subscription, got immediate community rejection, and switched to $40 perpetual within hours. Pre-plan your pricing fallback before any public launch on Hacker News — subscription resistance for macOS utility software is near-universal.
+</Tip>
+
+## Counter-intuitive finding
+
+**The WordPress backdoor used an Ethereum smart contract for command-and-control.** This is genuinely novel. From the original article: "It resolved its C2 domain through an Ethereum smart contract, querying public blockchain RPC endpoints. Traditional domain takedowns would not work because the attacker could update the smart contract to point to a new domain at any time."
+
+The attacker spent six figures on Flippa buying the plugin portfolio, then waited 8 months before activating the backdoor. This isn't opportunistic hacking — it's a calculated investment with sophisticated operational security. The supply chain attack playbook just got significantly harder to defend against.
+
+**A single CLAUDE.md file is the #2 trending repository on all of GitHub.** [andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) gained 21,795 stars this week. It's literally a text file — no code, no framework, no package. The fact that a prompt engineering document outranks virtually every software project on GitHub tells you something concrete about where developer value is shifting.
+
+**Subscription pricing was rejected for a $9.99/month macOS menu bar app, but a $40 one-time purchase was celebrated.** Four months of subscription equals the perpetual price. Users aren't doing math — they're making an emotional decision about ownership vs. rental. @sonofhans: "I have apps on Macs that are over 20 years old. Some of those companies don't exist anymore." The fear isn't price. It's dependency.
+
+## Explore related reports
+
+<CardGroup cols={2}>
+  <Card title="Competitive intel" icon="chess" href="/reports/competitive-intel">
+    Revenue milestones, pricing models, and the tools indie developers use to grow.
+  </Card>
+  <Card title="GitHub Trending signals" icon="code-branch" href="/sources/github-trending">
+    How BuilderPulse tracks fast-moving open-source projects before they go mainstream.
+  </Card>
+  <Card title="Next report: April 16" icon="calendar-day" href="/archive/2026/april-16">
+    Hermes-agent hits 53K stars. Cal.com goes closed source. Build: social media scheduler.
+  </Card>
+  <Card title="Previous report: April 14" icon="calendar-day" href="/archive/2026/april-14">
+    14K stars for a single CLAUDE.md file. $10K MRR on a $20/month stack.
+  </Card>
+</CardGroup>
+
+---
+
+<Note>
+Read the full April 15 report on GitHub: [BuilderPulse/en/2026/2026-04-15.md](https://github.com/BuilderPulse/BuilderPulse/blob/main/en/2026/2026-04-15.md)
+</Note>

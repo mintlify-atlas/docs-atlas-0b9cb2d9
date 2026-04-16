@@ -1,80 +1,73 @@
 ---
-title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+title: "Get started with BuilderPulse"
+description: "Subscribe to BuilderPulse daily reports in under 5 minutes using GitHub Watch, RSS, or direct links to English and Chinese editions."
 ---
 
-## Get started in three steps
+BuilderPulse requires no account, no email address, and no subscription form. Reports live in a public GitHub repository and are delivered via standard mechanisms — GitHub notifications and RSS — that you already have access to. Follow the steps below to start receiving daily reports and get the most out of each one.
 
-Get your documentation site running locally and make your first customization.
+<Steps>
+  <Step title="Watch the GitHub repository">
+    Go to [github.com/BuilderPulse/BuilderPulse](https://github.com/BuilderPulse/BuilderPulse) and click **Watch** in the top-right corner. From the dropdown, select **All Activity** to receive a GitHub notification every time a new report is published.
 
-### Step 1: Set up your local environment
+    You can also click **Star** to bookmark the repository and make it easier to find later — but Watch is what triggers notifications.
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+    <Info>
+      Each new daily report is committed directly to the main branch. GitHub sends a notification for every commit when you watch with All Activity enabled.
+    </Info>
+  </Step>
 
-### Step 2: Deploy your changes
+  <Step title="Subscribe via RSS">
+    Add the following Atom feed URL to your RSS reader:
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+    ```
+    https://github.com/BuilderPulse/BuilderPulse/commits/main.atom
+    ```
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+    This feed updates every time a new commit lands on the main branch — which happens once per day when the new report publishes. It works with any RSS reader that supports Atom feeds, including Feedly, NetNewsWire, Reeder, and Miniflux.
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+    <Tip>
+      If you already use an RSS reader for other developer news (Hacker News, GitHub release feeds, blog posts), adding BuilderPulse to the same reader keeps your reading workflow in one place.
+    </Tip>
+  </Step>
 
-### Step 3: Go live
+  <Step title="Read your first report">
+    Reports are stored at a predictable path in the repository. To read today's English report, navigate to:
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+    ```
+    en/YYYY/YYYY-MM-DD.md
+    ```
 
-## Next steps
+    For example, the April 16, 2026 report is at `en/2026/2026-04-16.md`. You can read it directly on GitHub or clone the repository to read locally.
 
-Now that you have your docs running, explore these key features:
+    The README at the root of the repository always links to the most recent report — so if you're not sure what today's date is in the report schedule, start there.
+
+    <Tip>
+      A Chinese edition is published at the same time at `zh/YYYY/YYYY-MM-DD.md`. The Chinese edition is written for Chinese-speaking builders — not a machine translation — and sometimes includes different framing or additional context relevant to the Chinese tech ecosystem.
+    </Tip>
+  </Step>
+
+  <Step title="Navigate the report sections">
+    Every report follows the same five-section structure. Use the section headers to jump to what's most relevant to you:
+
+    - **Discovery** — What launched today, which search terms are surging, which GitHub projects have no commercial version yet, and what developers are complaining about. Start here if you're looking for a build idea.
+    - **Tech Radar** — Product shutdowns and downgrades, fastest-growing developer tools, and new AI model releases with consumer product analysis. Start here if you're tracking the competitive landscape.
+    - **Competitive Intel** — Real revenue numbers from indie developers, dormant projects reviving, and migration stories. Start here if you're thinking about pricing or positioning.
+    - **Trends** — Keyword frequency shifts, VC focus areas, and the new-word radar. Start here if you're planning content or SEO strategy.
+    - **Action** — The concrete build recommendation. This section always gives you a 2-hour project and a weekend expansion, with explicit reasoning for why the data supports each one. Start here if you have limited time and want to act on the day's findings directly.
+
+    <Note>
+      The **Action** section at the end of each report also includes the most counter-intuitive finding of the day. These are often the most useful: the April 13, 2026 report's counter-intuitive finding was that Berkeley researchers had gamed all 8 mainstream AI agent benchmarks to near-perfect scores without solving any actual tasks — which changes how you should evaluate model selection entirely.
+    </Note>
+  </Step>
+</Steps>
+
+## What to read next
 
 <CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
+  <Card title="How it works" icon="gears" href="/how-it-works">
+    Learn how BuilderPulse cross-validates signals across sources and generates its daily build recommendation.
+  </Card>
+  <Card title="Understanding reports" icon="newspaper" href="/reports/overview">
+    A detailed guide to each section of the daily report — what each question is looking for and how to apply the findings.
+  </Card>
 </CardGroup>
-
-<Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
-</Note>

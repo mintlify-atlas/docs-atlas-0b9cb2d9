@@ -1,0 +1,130 @@
+---
+title: "April 14 2026: 14K stars for a single CLAUDE.md file"
+description: "Andrej Karpathy's CLAUDE.md config earns 14,317 stars with no code. The agent skills marketplace is wide open. What to build this weekend."
+---
+
+April 14 crystallized a theme that BuilderPulse had been tracking for weeks: the most valuable developer assets in the AI era aren't necessarily code. A single markdown file containing Andrej Karpathy's observations on LLM coding pitfalls earned 14,317 GitHub stars in one week — more than most fully-built products. Alongside that signal, a founder running multiple $10K MRR companies on a $20/month tech stack described getting rejected from VC pitch nights because investors couldn't understand why he'd need their money.
+
+## Top 3 highlights
+
+<Note>
+**1. A single developer runs multiple $10K MRR companies on a $20/month tech stack — and VCs keep rejecting him because he doesn't need their money.** @tradertef's article (940 points, 499 comments) details the exact playbook: a $5–10 VPS on Linode/DigitalOcean, SQLite with WAL mode, Go for the backend, and GitHub Copilot Chat. Products include websequencediagrams.com and eh-trade.ca. One commenter pushed this further: using fly.io suspend + litestream brings backend costs down to $0.10/month.
+</Note>
+
+<Note>
+**2. Someone paid six figures on Flippa for 30 WordPress plugins and planted backdoors in all of them, using Ethereum smart contracts for command-and-control.** The malware was dormant for 8 months before activation. WordPress.org's forced update neutralized the phone-home mechanism but did not clean the injected code from wp-config.php. Traditional domain takedowns don't work against blockchain-based C2 infrastructure.
+</Note>
+
+<Note>
+**3. "Claude managed agents" and "hermes agent" are the two breakout Google search terms this week, both validated across GitHub Trending and HuggingFace simultaneously.** Hermes-agent gained 48,286 stars in one week — the #1 trending repo by a wide margin. "Claude managed agents" hit Breakout growth from near-zero baseline. The dual search variant "claude managed agent" (singular) is up +1,350%.
+</Note>
+
+## Key signals this day
+
+<CardGroup cols={2}>
+  <Card title="Andrej Karpathy skills: 14K stars, one file" icon="file-lines" href="https://github.com/forrestchang/andrej-karpathy-skills">
+    A single CLAUDE.md file containing Karpathy's observations on LLM coding pitfalls earned 14,317 weekly stars. The #2 trending repo on GitHub. No code, no framework, no package.
+  </Card>
+  <Card title="$10K MRR on $20/month costs" icon="server" href="https://stevehanov.ca/blog/how-i-run-multiple-10k-mrr-companies-on-a-20month-tech-stack">
+    The lean bootstrap article that proved the ceiling of bootstrapping is far higher than most imagine — but costs being near-zero also means VCs won't fund you. 940 HN points, 499 comments.
+  </Card>
+  <Card title="GitHub Stacked PRs go official" icon="code-pull-request" href="https://github.github.com/gh-stack/">
+    GitHub shipped official stacked PR support (616 points, 343 comments) — validating the workflow and effectively ending the market for third-party tools like Graphite and ghstack.
+  </Card>
+  <Card title="Pardonned.com: public data as a product" icon="gavel" href="https://pardonned.com/">
+    483 HN points for a US presidential pardon records search engine. @varenc extracted all data from a single page load — the entire value is in curation and search UX, not technical complexity.
+  </Card>
+  <Card title="Claudraband: Claude Code power tool" icon="terminal" href="https://github.com/halfwhey/claudraband">
+    117 HN points for a Claude Code enhancement for power users. Part of the growing ecosystem of tooling forming specifically around Claude Code.
+  </Card>
+  <Card title="Brightbean Studio: AI-built in 3 weeks" icon="calendar-check" href="https://github.com/brightbeanxyz/brightbean-studio">
+    A social media management tool built with Claude and Codex in 3 weeks, open-sourced on GitHub. 177 HN points. The "AI-assisted 3-week ship" is becoming the default Show HN origin story.
+  </Card>
+</CardGroup>
+
+### The agent skills marketplace gap
+
+Five independent signals converged on the same opportunity this week:
+
+- [Skills Janitor](https://www.producthunt.com/products/skills-janitor) on Product Hunt (174 votes) — "Find which Claude Code skills you actually use"
+- [andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) on GitHub (14,317 stars this week) — a single CLAUDE.md file
+- [Claudraband](https://github.com/halfwhey/claudraband) on Show HN (117 points) — Claude Code power user tool
+- [seomachine](https://github.com/TheCraigHewitt/seomachine) on GitHub (2,548 stars) — Claude Code SEO workspace
+- [ContextPool](https://www.producthunt.com/products/contextpool) on Product Hunt (156 votes) — persistent memory for AI coding agents
+
+No one has built the discovery layer that indexes public GitHub repos containing CLAUDE.md or `.claude/skills/` directories, lets users browse and rate them, and generates a one-click install command.
+
+### HuggingFace models worth watching
+
+**[GLM-5.1](https://huggingface.co/zai-org/GLM-5.1)** (trending #1, score 1,158) — MIT-licensed Mixture-of-Experts text generation model with EN/ZH bilingual support. Because it's MoE, inference costs less to run. Consumer opportunity: self-hosted chatbots for businesses that need bilingual support without API costs.
+
+**[VoxCPM2](https://huggingface.co/openbmb/VoxCPM2)** (trending #2, 726 score) — 48kHz text-to-speech with voice cloning and voice design. Near-broadcast quality open source. Also launched on Product Hunt (116 votes).
+
+**[Netflix void-model](https://huggingface.co/netflix/void-model)** (Apache 2.0) — video inpainting and object removal. Netflix open-sourced production-grade video editing AI. Consumer opportunity: one-click removal of unwanted objects from home videos.
+
+## Tech radar
+
+**OpenAI silently removed Study Mode from ChatGPT** (177 points, 77 comments). No announcement, no migration path. For edtech founders, this signals that OpenAI's investment in the education use case is declining.
+
+**Anthropic downgraded cache TTL on March 6th** (545 points, 418 comments). A silent pricing change that directly increases costs for heavy API users. Combined with Pro Max quota exhaustion issues (731 points), this represents a meaningful degradation of the Claude developer experience.
+
+**Eleventy reaches its end** — the popular static site generator is winding down (207 points, 175 comments). Teams still using Eleventy should consider migrating to Astro or Hugo. "Eleventy to Astro" automatic converter is an immediate short-term opportunity.
+
+**Cirrus Labs joins OpenAI** (279 points, 139 comments). The CI/CD tooling company's acquisition means the future of its independent products is uncertain. If you're on Cirrus CI, have a Plan B.
+
+**Google removes "Doki Doki Literature Club" from Google Play** (511 points, 286 comments). The beloved visual novel was pulled without warning — another arbitrary app store moderation decision.
+
+<Info>
+Coolify hit +500% on Google Trends this week. If you're building a self-hosted tool, wrapping it in a one-click deploy via Docker Compose is no longer optional — it's the minimum viable distribution strategy.
+</Info>
+
+## Build recommendation
+
+**2-hour project: Claude Code Skills Marketplace / Discovery Tool**
+
+Build a simple web app that indexes public GitHub repos containing CLAUDE.md or `.claude/skills/` directories, lets users browse, search, and rate them, and generates a one-click install command. You can build the indexer with the GitHub API and ship the frontend as a static site.
+
+Monetization: featured listings for commercial skill authors, or a $5/month "pro skills" subscription that unlocks private skill uploads and team sharing.
+
+**This is the higher-conviction 2-hour bet.** The demand is validated across 5 independent data sources this week, and no one has built the discovery layer yet. The Karpathy skills repo proved there's massive demand for curated skill files — the marketplace is the next logical step.
+
+**Weekend project: open-source social media scheduling tool with one-click deploy.** The Reddit post about replacing $400/month Sendible/Later with a self-hosted alternative got strong traction. The opportunity isn't just the tool — it's the Coolify-style Docker Compose wrapper around it. Google Trends shows Coolify at +500%, and the self-hosted tooling demand wave is clearly still building.
+
+Stack recommendation from the $10K MRR article: SQLite + Go + $10 VPS = effectively infinite gross margin. The economics work; the only remaining cost is your time.
+
+<Tip>
+The "Polymarket No-bet bot" counter-intuitive finding from this day is directly applicable to your product work: Nothing Ever Happens (395 points, 214 comments) is a bot that buys "No" on every non-sports prediction market and earns consistent returns. The thesis maps to product development — the most accurate prediction is usually stasis, and the most profitable product is usually the unglamorous, reliable, slightly-better-than-status-quo tool.
+</Tip>
+
+## Counter-intuitive findings
+
+**A Polymarket bot that always bets "No" on everything is profitable.** [Nothing Ever Happens](https://github.com/sterlingcrispin/nothing-ever-happens) (395 points, 214 comments) automatically buys "No" on every non-sports prediction market. The thesis: prediction markets have a systematic bias toward dramatic outcomes because bettors are drawn to exciting "Yes" scenarios. The boring outcome — nothing happens — is consistently underpriced.
+
+The deeper insight for builders: the default outcome in most markets is stasis. If you're building prediction features, recommendation engines, or trend detectors, calibrate against a "nothing happens" baseline. Most products over-index on novelty.
+
+**VCs keep rejecting a founder who runs multiple $10K MRR companies.** The rejection feedback from pitch nights: "What do you even need funding for?" The extreme lean bootstrapper enters a paradox — margins too high to attract investment, because VCs invest in growth potential, not current profit. 940 points and 499 comments show this resonates deeply with indie developers.
+
+**WordPress plugin trust is structurally broken.** @cold_tom: "The scariest part isn't the backdoor itself, it's how normal the acquisition looked. Buying a trusted plugin and pushing an update is basically indistinguishable from legitimate maintenance." The FAIR package manager project tried to fix this decentrally and recently shut down — the gap remains open.
+
+## Explore related reports
+
+<CardGroup cols={2}>
+  <Card title="Action section deep dive" icon="hammer" href="/reports/action">
+    How BuilderPulse synthesizes signals into ranked build recommendations each day.
+  </Card>
+  <Card title="HuggingFace signals" icon="robot" href="/sources/huggingface">
+    How trending model data feeds into consumer product opportunity analysis.
+  </Card>
+  <Card title="Next report: April 15" icon="calendar-day" href="/archive/2026/april-15">
+    Backblaze's silent backup failure and the Ethereum-powered WordPress backdoor.
+  </Card>
+  <Card title="Previous report: April 13" icon="calendar-day" href="/archive/2026/april-13">
+    All 8 AI benchmarks broken. Hermes-agent hits 38K stars. Claude agents +3,750%.
+  </Card>
+</CardGroup>
+
+---
+
+<Note>
+Read the full April 14 report on GitHub: [BuilderPulse/en/2026/2026-04-14.md](https://github.com/BuilderPulse/BuilderPulse/blob/main/en/2026/2026-04-14.md)
+</Note>

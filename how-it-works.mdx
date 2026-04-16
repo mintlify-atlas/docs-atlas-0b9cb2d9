@@ -1,0 +1,118 @@
+---
+title: "How BuilderPulse synthesizes daily builder intelligence"
+description: "BuilderPulse cross-references HN, GitHub, Product Hunt, HuggingFace, Google Trends, and Reddit daily to surface high-signal build opportunities using AI."
+---
+
+Every morning, BuilderPulse ingests data from 10+ sources, runs it through 20 structured questions, cross-validates findings across sources, and publishes a single report with one concrete build recommendation. The process runs on a fixed cadence — updated by 10:00–17:00 Shanghai time — so you can read today's findings and start acting on them the same day.
+
+## Data sources monitored
+
+BuilderPulse monitors the platforms where builders, developers, and founders publicly share what they're building, buying, and complaining about.
+
+<CardGroup cols={2}>
+  <Card title="Hacker News" icon="y-combinator">
+    Front-page stories, Show HN launches, Ask HN threads, and comment sections. High-scoring posts with large comment threads indicate validated interest — not just upvotes.
+  </Card>
+  <Card title="GitHub Trending" icon="github">
+    Weekly star counts for trending repositories, filtered for projects without existing commercial versions. Velocity matters more than absolute star count.
+  </Card>
+  <Card title="Product Hunt" icon="product-hunt">
+    Launch vote counts and categories, tracked against parallel Hacker News and GitHub signals. Cross-validation removes noise from vote farming.
+  </Card>
+  <Card title="HuggingFace" icon="face-smile">
+    Trending model scores, download counts, and Space activity. Consumer product opportunities are identified based on model capabilities and licensing.
+  </Card>
+  <Card title="Google Trends" icon="magnifying-glass-chart">
+    7-day and 3-month rising search terms, with particular attention to terms rising from zero (Breakout status) and terms cooling after a spike.
+  </Card>
+  <Card title="Reddit" icon="reddit">
+    Indie hacker and SaaS communities, where founders share real revenue numbers, pricing experiments, churn rates, and customer acquisition stories.
+  </Card>
+</CardGroup>
+
+## The 20 structured questions framework
+
+Every BuilderPulse report answers the same 20 questions in the same order. This structure lets you skip directly to the section that matters to you, and compare findings across days with consistent framing.
+
+The questions are grouped into five sections — Discovery, Tech Radar, Competitive Intel, Trends, and Action — and applied fresh to each day's data.
+
+Here are examples drawn directly from recent reports:
+
+- **What solo-founder products launched today?** — Surfaces new Show HN and Product Hunt launches with community reaction signals. When TracksSuccession (SEC filing tracker) earned 172 points on Show HN and commenters immediately suggested specific feature expansions, that's a demand signal, not just a launch.
+
+- **Which search terms are surging abnormally?** — Identifies Google Trends terms rising faster than baseline, then cross-validates them. "Claude managed agents" hit +3,750% in one week while simultaneously appearing as the top Hacker News and Product Hunt story — a high-confidence signal because it's triple-validated.
+
+- **Which fast-growing open-source projects lack a commercial version?** — Finds the commercialization vacuum. When hermes-agent hit 53,110 weekly GitHub stars with no hosted product, no enterprise tier, and no SaaS layer, that gap is the signal.
+
+- **What tools are developers complaining about?** — Tracks complaint volume and specificity. Backblaze silently excluding OneDrive and Dropbox from backups drew 668 comments and started a migration discussion toward restic, borg, and rclone — a product opportunity visible in the thread itself.
+
+- **Did any major company shut down or downgrade a product?** — Follows shutdowns, silent downgrades, and product removals. Cal.com going closed source in April 2026 opened a scheduling tool gap and triggered a licensing debate that surfaced a new category of "AI-resistant open-source" products.
+
+- **What are the hottest HuggingFace models, and what consumer products could they enable?** — Translates model releases into product directions. OmniVoice (606K downloads, zero-shot multilingual voice cloning) points directly to a "clone your voice in 5 seconds, read any article aloud" consumer product — technically feasible and with a validated monetization path from Eleven Labs.
+
+- **What revenue and pricing discussions are indie developers having?** — Extracts real numbers from public Reddit and Hacker News threads. Tally sharing $5M ARR while crediting AI search as their top acquisition channel is an insight worth more than any benchmarking report.
+
+- **What is today's most counter-intuitive finding?** — Surfaces findings that contradict conventional wisdom. Berkeley proving that all 8 mainstream AI agent benchmarks can be gamed for near-perfect scores without solving any actual tasks (1,235 points, 328 comments) changes how you should evaluate model selection decisions.
+
+<Note>
+  The 20 questions are applied consistently every day. If a section has no significant findings, it says so — BuilderPulse does not pad reports to fill a template.
+</Note>
+
+## Cross-validation methodology
+
+A signal appearing in a single source is noise. A signal appearing across multiple independent sources — on the same day, without coordination — is a finding worth acting on.
+
+BuilderPulse uses a tiered validation approach:
+
+- **High-confidence signals** are validated in at least two independent sources. "Claude managed agents" at +950% on Google Trends is high-confidence because it appears simultaneously on Hacker News (700 points), Product Hunt (#1 with 448 votes), and GitHub (five of the top 10 trending repos are Claude Code ecosystem tools). Any one of those alone would be interesting. All four together is actionable.
+
+- **External signals** are search trends rising without a matching GitHub or Hacker News signal. These are flagged separately — they may be leading indicators (something is being searched before it appears in developer discussion) or they may be noise. "Goose ai agent" at +150% on Google Trends appeared before goose showed up in GitHub Trending, making it a genuine leading indicator worth watching.
+
+- **Cooling signals** track what's declining. When "openclaw" dropped from Breakout status on 3-month Google Trends to absent from the 7-day window, that doesn't mean OpenClaw is dead — it means the discovery phase is over and the SEO content opportunity has shifted from "what is OpenClaw" to "how to use OpenClaw better."
+
+This methodology means the build recommendation at the end of each report is backed by convergent evidence, not a single data point.
+
+## How the build recommendation is generated
+
+The **Action** section at the end of each report produces two recommendations: a 2-hour build and a weekend expansion. These are generated by combining:
+
+1. **Pain signals** — developer complaints with high comment counts, tools drawing migration discussions
+2. **Demand validation** — search term growth, GitHub star velocity, Product Hunt vote counts
+3. **Revenue data** — real numbers shared publicly on Reddit and Hacker News
+4. **Gap analysis** — fast-growing open-source projects with no commercial layer
+5. **Competitive context** — whether a platform owner (like Anthropic) could absorb a product with a single feature release
+
+For example, the April 16, 2026 recommendation for an open-source social media scheduler combined: a Reddit founder paying $400/month across Sendible and Later who built a replacement on a €10/month Hetzner VPS (pain + cost structure validated), the self-hosting search surge (vaultwarden Breakout, gitea +300%, joplin +250%), and Tally's $5M ARR confirming "simple tool, done well" as a viable SaaS thesis. Each element is cited with a source link.
+
+The recommendation also includes explicit reasoning for *not* choosing the other top candidates — so you can understand the tradeoffs, not just follow the conclusion.
+
+## Update cadence and timing
+
+Reports are published once per day. The timestamp appears at the top of each report in Shanghai time — typically between 10:00 and 17:00. Reports for a given date are named `en/YYYY/YYYY-MM-DD.md` for the English edition and `zh/YYYY/YYYY-MM-DD.md` for the Chinese edition.
+
+Each new report is a commit to the main branch of the BuilderPulse GitHub repository. If you subscribe via the Atom feed or watch the repository, you receive a notification for each new report as it publishes.
+
+## Report format
+
+Every BuilderPulse report follows the same five-section structure:
+
+<CardGroup cols={2}>
+  <Card title="Discovery" icon="binoculars">
+    What launched, what's being searched, which open-source projects lack a commercial version, and what tools developers are publicly frustrated with.
+  </Card>
+  <Card title="Tech Radar" icon="circle-dot">
+    Company shutdowns and product downgrades, fastest-growing developer tools, HuggingFace model releases and their consumer product potential, and major open-source AI developments.
+  </Card>
+  <Card title="Competitive Intel" icon="chess">
+    Revenue and pricing discussions from indie developers (with real numbers), dormant projects that are reviving, and "X is dead" migration articles — including where users are migrating to.
+  </Card>
+  <Card title="Trends" icon="arrow-trend-up">
+    Keyword frequency changes week over week, VC and YC focus areas, search terms that are cooling, and the new-word radar tracking concepts rising from zero.
+  </Card>
+  <Card title="Action" icon="bolt">
+    The 2-hour and weekend build recommendations, pricing and monetization models worth studying, the most counter-intuitive finding of the day, and cross-opportunities between Product Hunt and developer tools.
+  </Card>
+  <Card title="Sources" icon="link">
+    Every claim links directly to its source — a Hacker News post with point count and comment count, a GitHub repo with weekly star count, a Google Trends URL, or a Reddit thread. No anonymous assertions.
+  </Card>
+</CardGroup>

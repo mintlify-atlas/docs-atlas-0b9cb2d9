@@ -1,0 +1,99 @@
+---
+title: "Trends: keyword shifts, VC focus, and cooling signals"
+description: "Trends covers keyword frequency shifts, VC and YC focus areas, cooling AI buzzwords, and brand-new concepts rising from near-zero search volume each week."
+---
+
+Trends is the fourth section of every BuilderPulse report, and it answers the direction question: where is the market moving, and how fast? Where Discovery captures individual signals and Tech Radar adds tooling context, Trends steps back and asks what all those signals mean at the category level. It answers four questions every week: which technical keywords changed frequency and in what direction, what topics VCs and YC are focusing on, which AI buzzwords are cooling off, and which brand-new concepts are rising from near-zero search volume. These answers tell you whether you're early to a category, late to it, or positioned perfectly at the moment when content vacuums are widest.
+
+## The four Trends questions
+
+<AccordionGroup>
+  <Accordion title="What are the most frequent tech keywords this week, and how have they changed?" icon="chart-line" defaultOpen={true}>
+    This question tracks keyword frequency across all sources — GitHub repo descriptions, Hacker News titles and comments, Product Hunt taglines, HuggingFace model names, and Google search data — and compares this week's frequency to the previous week. It identifies which keyword clusters are growing in density, which are plateauing, and which are declining.
+
+    The report does not just track individual keywords but clusters — groups of related terms that signal a macro narrative. A single keyword rising can be noise; a cluster of related keywords rising simultaneously is a confirmed narrative shift.
+
+    **Real example — "AI agents" cluster (April 13–16):** The phrase "AI agent" appeared across every data source simultaneously: hermes-agent as the #1 GitHub trending repo, "claude managed agents" at +3,750% on Google Trends, multica and Archon in GitHub Trending, Claude Code Routines at 700 Hacker News points, and five AI agent products in the top 20 on Product Hunt. The report's April 16 conclusion: "The keyword shift from 'AI tools' to 'AI agents' is this week's most important transition. 'Agent' implies persistence, memory, and autonomy — not just one-shot assistance."
+
+    **Real example — "self-hosted / alternatives" cluster (April 16):** Driven by the Google/ICE privacy story and Backblaze trust erosion, Google Trends showed vaultwarden (Breakout), gitea (+300%), joplin (+250%), appflowy (+130%), logseq (+130%), mattermost (+100%), and bitwarden self-hosted (+60%) rising simultaneously. This keyword family had been growing for 6+ months but received a sharp acceleration in a single week. The cluster tells the story better than any single data point.
+
+    **What keyword frequency tells you:** A keyword cluster's density is a proxy for how far through the adoption curve a category has moved. When "AI agent" appears in GitHub repo names, Google searches, Product Hunt taglines, and Hacker News titles in the same week, the category has crossed from early adopter to mainstream developer awareness. The opportunity has not disappeared — but the nature of it has changed. You are no longer competing for early adopters; you are competing for developers who have already heard of the category.
+
+    <Note>
+    The most important April 2026 keyword transition is from "AI" (generic) to "AI agent" (specific). Builders who stop building "AI-powered X" and start building "agent that does X autonomously" are aligning with the direction the market is already moving.
+    </Note>
+  </Accordion>
+
+  <Accordion title="What topics are VCs and YC focusing on?" icon="money-bill-trend-up">
+    This question infers VC and YC investment focus from a combination of signals: which categories are receiving the most cross-platform validation (GitHub + Product Hunt + Hacker News), which types of products appear in the "What Are You Working On?" Hacker News thread (a direct window into builder-stage companies), and which product launches are framed around regulatory moats or enterprise compliance.
+
+    VCs don't announce their thesis in real time, but their focus becomes visible in the products that get funded, the types of companies that launch on Product Hunt, and the questions that get traction in the Hacker News builder community.
+
+    **Real example — AI agent platforms (April 16):** Claude Code Routines scored 700 points on Hacker News — the highest for any company product launch that week. Five of the top ten GitHub trending repos were Claude Code ecosystem tools. The report's VC thesis: the platform layer of AI agent infrastructure (sandboxes, orchestration, managed services) is where investment is flowing. Products like Intent (302 Product Hunt votes) — "describe a feature and AI agents build, verify, and ship it" — represent the VC thesis that agent-native development will replace traditional CI/CD.
+
+    **Real example — financial AI with regulatory moats (April 16):** LangAlpha scored 144 Hacker News points with @kantaro raising the MiFID II / FINRA compliance question in the comments — exactly the kind of regulatory moat VCs favor. The report's fundable thesis framing: "regulated industry + AI agent + compliance moat." Financial AI with built-in audit trails is the template.
+
+    **Real example — "What Are You Working On?" thread (April 15–16, 341 points, 1,153 comments):** The Ask HN thread with the most comments of the month is the best real-time signal of what YC-adjacent founders are building. @cmos was building "Still Kicking" — a picture frame device with an mmWave sensor that monitors elderly people living alone. Healthcare/eldercare is perennial YC territory. @ctbellmar's PlantLab does AI plant health diagnosis as a vertical API — the YC-favored "AI + vertical + API" pattern.
+
+    **How to use this signal:** If you are raising funding, the report tells you which framing is most legible to investors right now. If you are bootstrapping, it tells you which categories have enough momentum to attract VC-funded competitors — both a threat (well-funded competition incoming) and a signal (the market is large enough to support it).
+
+    <Tip>
+    The VC-fundable thesis of April 2026: "AI agent infrastructure for regulated industries." Enterprise agent deployment with audit trails, compliance controls, and role-based access is where institutional investment is flowing. Products like ElevenAgents Guardrails (125 Product Hunt votes) are building exactly this.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Which AI search terms are cooling off?" icon="arrow-trend-down">
+    This question compares Google Trends 3-month rising queries against 7-day rising queries to identify terms that were growing over the past quarter but have dropped out of the recent rising window. These are keywords whose hype cycle has peaked — either because the product has moved from discovery to mainstream use, or because it failed to sustain interest.
+
+    The distinction matters: a cooling term can mean the product has succeeded (it's now so mainstream that curiosity searches have normalized) or that it has failed (early hype faded). The report reads both cases differently.
+
+    **Real example — OpenClaw cooling (April 16):** Over the past 3 months, "openclaw" hit Breakout status with an extracted value of 815,750 — the highest search volume of any AI term in the dataset. In the 7-day window, it was completely absent from rising queries. Related terms follow the same pattern: "openclaw ai agent" (190,850 → absent), "openclaw github" (167,800 → absent), "open claw" (5,300 → absent). The report's interpretation: OpenClaw has moved from explosive growth to mainstream plateau — or early decline. The Hacker News signal is mixed: "Ask HN: Who is using OpenClaw?" scored 229 points with 268 comments, and two products (ClawTrace and Wafer Pass) launched targeting OpenClaw users. The conclusion: "The opportunity has shifted from 'explain what OpenClaw is' (SEO content) to 'make OpenClaw work better' (tools like ClawTrace). Builders should follow the demand curve, not fight it."
+
+    **Real example — OpenClaw → hermes-agent succession (April 13):** "openclaw," "openclaw ai," "openclaw github," and "clawdbot" all moved from Breakout (3-month window) to completely absent (7-day window). Taking their place: "claude managed agents" at +3,750% and "hermes agent" variants at +60–90%. The report's meta-observation: "AI agent project lifecycles are extremely short (a new wave every 2–3 months). Chasing individual project names is less effective than chasing category keywords ('ai agent framework,' 'ai agent cost')."
+
+    **Real example — "Claude Cowork" replaced (April 14):** "claude cowork" was Breakout in the 3-month window but absent from 7-day data. "Claude managed agents" at Breakout growth took its place. Anthropic appears to have repositioned the product, and the search audience followed.
+
+    **How to use this signal:** Cooling terms tell you where the content opportunity has closed. "What is OpenClaw?" articles no longer capture search traffic because those queries have normalized. The opportunity has moved to "how to use OpenClaw better" — optimization, monitoring, and cost control tools. When you see a term cooling, the question is always: what is the next thing the existing audience needs?
+  </Accordion>
+
+  <Accordion title="New-word radar: which brand-new concepts are rising from zero?" icon="radar">
+    This is the highest-conviction section of Trends and the most time-sensitive. The new-word radar identifies search terms that have risen from near-zero baseline to significant growth in the past 7 days — concepts so new that almost no quality content exists for them yet. These represent maximum content vacuum: high search intent, thin supply.
+
+    The report distinguishes between two tiers of new-word signals:
+
+    **High-confidence signals** appear in both Google Trends AND at least one other data source. These are dual-validated and represent real product adoption, not search curiosity.
+
+    **External discoveries** appear only in Google search data. They may be early indicators of emerging products, but they require additional validation before acting on them.
+
+    **Real example — "claude managed agents" at +3,750% (April 13):** This term went from near-zero to the highest growth rate of any AI search term in the dataset. Dual-validated by GitHub (hermes-agent at #1, 38,426 stars) and Hacker News (Claude Code Routines at 700 points). The report called it "this week's strongest signal" and the "clearest from-zero search term of April 2026." A well-written explainer article published that week could capture significant organic search traffic for months, because quality content on the topic was nearly nonexistent.
+
+    **Real example — "hermes agent" variants (April 15–16):** "hermes agent github" (+130–140%), "hermes ai agent" (+90–110%), "hermes ai" (+90%) all rose simultaneously from near-zero. All dual-validated by NousResearch/hermes-agent's #1 GitHub position. The report noted that "hermes" is becoming shorthand for "adaptive AI agent" in the same way "transformer" became shorthand for attention-based models — a brand entering developer consciousness as a category name.
+
+    **Real example — "vaultwarden" at Breakout (April 16):** Not a brand-new concept, but experiencing its first Breakout search spike — triggered by the Google/ICE privacy story. The self-hosted Bitwarden alternative had existed for years but was suddenly being searched at unprecedented volume. An established project suddenly becoming a top search term is functionally similar to a new term appearing: the content vacuum for "how to set up vaultwarden" exploded overnight.
+
+    **Real example — "fluxer" at +60% (April 16):** The only term appearing in both the 3-month and 7-day rising windows, indicating persistent, compounding growth rather than a spike. This is the rarest signal: a term that has been growing for months and is still accelerating.
+
+    <Tip>
+    "Claude managed agents" at +3,750% with thin existing content is the template for acting on new-word radar signals: find the highest-growth term with the fewest quality articles ranking, publish a definitive guide within 48 hours, and capture the search traffic before the window closes. This opportunity typically lasts 2–4 weeks before competition catches up.
+    </Tip>
+  </Accordion>
+</AccordionGroup>
+
+## Reading Trends in context
+
+Trends is most valuable when read against Discovery. Discovery tells you what is happening right now; Trends tells you whether that signal is early, mainstream, or late. A Discovery signal of "hermes-agent trending on GitHub" becomes much more actionable when Trends tells you that "hermes agent" is a brand-new search term at +100–130% with almost no quality content ranking for it.
+
+<CardGroup cols={2}>
+  <Card title="Discovery" icon="magnifying-glass-chart" href="/reports/discovery">
+    The raw signals whose direction Trends helps you interpret.
+  </Card>
+  <Card title="Action" icon="lightbulb" href="/reports/action">
+    How Trends data feeds into timing recommendations for build and content decisions.
+  </Card>
+  <Card title="Google Trends source" icon="magnifying-glass" href="/sources/google-trends">
+    How BuilderPulse uses Google Trends data to identify rising and cooling keywords.
+  </Card>
+  <Card title="Report archive" icon="clock-rotate-left" href="/archive/2026/april-16">
+    Browse past reports to see how keyword cycles evolve over multiple weeks.
+  </Card>
+</CardGroup>

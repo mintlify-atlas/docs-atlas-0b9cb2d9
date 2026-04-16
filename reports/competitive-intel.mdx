@@ -1,0 +1,83 @@
+---
+title: "Competitive Intel: pricing, revenue, and market signals"
+description: "What Competitive Intel covers — revenue milestones, pricing debates, dormant projects reviving, and migration articles that signal market shifts for builders."
+---
+
+Competitive Intel is the third section of every BuilderPulse report, and it anchors everything you read in Discovery and Tech Radar to actual money. Indie developers and bootstrappers share real revenue numbers publicly — on Hacker News, Reddit's r/SaaS and r/SideProject, and in their own blog posts — and this section collects the most concrete data points from each week. It answers three questions: what revenue and pricing discussions are indie developers having, which dormant old projects are suddenly reviving, and whether any "XX is dead" or migration articles signal market shifts. Together these questions tell you what people are actually paying, what trust failures are creating migration waves, and which abandoned products are worth studying or forking.
+
+## The three Competitive Intel questions
+
+<AccordionGroup>
+  <Accordion title="What revenue and pricing discussions are indie developers having?" icon="dollar-sign" defaultOpen={true}>
+    This question collects the week's most concrete revenue milestones and pricing experiments from indie developers who share their numbers publicly. The emphasis is on specificity — revenue figures with context, pricing pivots with the community reaction, and operational data with cost breakdowns.
+
+    **Real example — Tally hits $5M ARR (April 16):** @Marie-Tally posted on Reddit that Tally — a fully bootstrapped form builder — reached $5M ARR after 5 years. The most important detail was the acquisition channel: "AI search is our #1 acquisition channel." They dropped revenue targets and are "optimizing for product quality" — and growing faster. This inverts the typical SaaS playbook. If ChatGPT or Claude recommends your tool when users ask "what's a good form builder?", that is free, high-intent acquisition. The report labeled this "the clearest pricing signal of the week" for established SaaS.
+
+    **Real example — $10K MRR on a $20/month tech stack (April 13–14, 842 points):** @tradertef's article on running multiple $10K MRR companies on a single $5–10 VPS (SQLite WAL + Go single binary) scored 842 points and 468 comments on Hacker News. The key insight: 99.8% gross margin. When infrastructure costs approach zero, you can price aggressively low and still profit, or price premium and print money. The irony documented in the comments: VCs keep rejecting him because he doesn't need their money.
+
+    **Real example — $400/month → €10/month social media scheduling (April 14–16):** @Ok-Constant6488 built an open-source social media scheduler after watching his girlfriend pay $400/month across Sendible and Later. The replacement runs on a €10/month Hetzner VPS. The core product is, as the builder described it, "a CRUD app with OAuth integrations and a cron job." The pricing gap between the market-rate product and the actual infrastructure cost is the opportunity: $400/month pain, €10/month solution, 97.5% gross margin from customer #1.
+
+    **Real example — boringBar pricing pivot (April 13–15):** @a-ve launched boringBar with subscription pricing and pivoted to a $40 perpetual license within hours of posting on Hacker News, after 165 comments almost exclusively focused on the pricing model. The community response proved a specific market rule: macOS utility users have a structural aversion to subscriptions. @sonofhans: "I have apps on Macs that are over 20 years old. Some of those companies don't exist anymore." The fear is dependency, not price.
+
+    **How to use this signal:** Revenue data from indie developers tells you the ceiling of bootstrapping (much higher than most assume), the pricing model that converts in specific categories (perpetual for desktop utilities, subscription for SaaS backends), and the acquisition channel that's replacing SEO for established products (AI search).
+
+    <Tip>
+    The most actionable revenue insight from April 2026: AI search is replacing Google SEO as the top acquisition channel for established SaaS products. If your product is what AI assistants recommend when users ask for help, you've found the cheapest customer acquisition of 2026.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Are any dormant old projects suddenly reviving?" icon="rotate-right">
+    This question tracks projects that have been dormant, abandoned, or out of the spotlight for months or years and are suddenly generating fresh attention. Revivals are high-signal for builders because they indicate unmet demand in a category that previously had no good solution — and because the revived project itself may be worth forking, contributing to, or building on top of.
+
+    **Real example — DaVinci Resolve adds photo editing (April 16, 1,125 points):** Blackmagic Design added a full photo editing page to DaVinci Resolve — expanding their professional video editing suite into the Adobe Lightroom / Capture One market. This is not a "dormant" project in the traditional sense, but it is a product entering a new market where it was previously absent. @lynndotpy: "Just yesterday, I was complaining about the state of photo editing software. I wished that DaVinci had a photo editor... AND it runs on Linux! It's not every night you make a wish and wake up to find out it has come true." The hardware-subsidized business model means the software can be genuinely free indefinitely.
+
+    **Real example — Servo browser engine on crates.io (April 14–15, 445–470 points):** Mozilla's experimental browser engine, started in 2012 and shelved when Mozilla laid off the team in 2020, hit [version 0.1.0 on crates.io](https://servo.org/blog/2026/04/13/servo-0.1.0-release/) — making it an embeddable Rust crate for the first time. Projects that need web rendering capabilities (desktop apps, embedded browsers, specialized crawlers) suddenly have a viable Rust dependency. The "sleeper hit" label the report used is accurate: this is infrastructure revival that enables new product categories.
+
+    **Real example — Jujutsu (jj) version control (April 16, 537 points, 483 comments):** The alternative version control system has been developing momentum over multiple weeks, with the April 16 report noting 483 comments — a depth of discussion that signals growing mainstream interest beyond early adopters.
+
+    **How to use this signal:** When a dormant project revives with strong community engagement, the opportunity is typically one of three things: a managed hosting service for the project (if it's open-source infrastructure), a migration tool from the old ecosystem to the revived one, or an application layer built on top of the newly viable underlying technology. Servo's crates.io milestone is the third type — it makes embedded browsers feasible in Rust projects for the first time.
+
+    <Note>
+    Joplin and Logseq — both established open-source note-taking applications — hit "Breakout" status on Google search trends in April 2026, years after their initial releases. The trigger was the Google/ICE privacy story. A single trust event can revive interest in entire alternative ecosystems. If you maintain an open-source self-hosted alternative to any major service, now is the time to optimize your "self-hosted alternative to X" landing pages.
+    </Note>
+  </Accordion>
+
+  <Accordion title="Are there any 'XX is dead' or migration articles?" icon="newspaper">
+    This question tracks articles, Hacker News posts, and Reddit threads that signal a market migration — a meaningful portion of users moving away from a product or category toward something else. These are not eulogy pieces; they are demand signals. When developers publicly describe leaving a product, they are describing the requirements of their replacement.
+
+    **Real example — Cal.com licensing debate (April 16):** Cal.com's decision to go closed source generated a direct response post — "Open Source Isn't Dead" — that scored 313 points and 167 comments, more than the original announcement. This created the sharpest articulation of the open-source sustainability debate in 2026. The report's takeaway: Cal.com's move follows HashiCorp (BSL), Elastic (SSPL), and Redis (dual licensing), but with a new AI-specific justification. The irony noted in the report: "This decision will likely accelerate exactly the AI-native competitor they're trying to prevent."
+
+    **Real example — Google migration wave (April 16, 1,152 points):** The story of [Google breaking its promise on data notifications](https://www.eff.org/deeplinks/2026/04/google-broke-its-promise-me-now-ice-has-my-data) — followed by ICE obtaining the data — triggered a documented migration wave. @jfoworjf: "I moved off my ~20 year old Google account and deleted everything off their services including almost a decade of Google photos." The migration destination was overwhelmingly self-hosted open-source alternatives. This is a direct explanation for the concurrent Breakout search spikes in vaultwarden, gitea, and joplin.
+
+    **Real example — Backblaze trust erosion (April 15–16, 611–668 comments):** The sentiment in the comment threads reads like a trust migration in progress. @mcherm: "After reading this article I will almost certainly never use or recommend Backblaze." Users in the comments were migrating to restic, borg, and rclone. The report identified the opportunity explicitly: 611 angry Hacker News comments equals a pre-built audience ready to try a transparent alternative. Launch while the discussion is hot.
+
+    **Real example — Eleventy end of life (April 13, 207 points):** The popular static site generator Eleventy wound down. The immediate opportunity: migration tooling (an "Eleventy to Astro" converter), and the audience is already on Hacker News discussing it.
+
+    **How to use this signal:** "XX is dead" articles are product briefs written by your future customers. They contain the exact requirements of the replacement product: what the old product did, what it failed to do, and what the commenters wish existed. The closer you ship your alternative to the peak of the migration discussion, the more organic traction you get.
+
+    <Tip>
+    The 2026 "dead" narrative is not about technologies dying — it is about trust dying. Google, Backblaze, and Cal.com are all trust stories. The migration destination is overwhelmingly self-hosted open-source alternatives. If you're building in the self-hosted space, this is your market moment.
+    </Tip>
+  </Accordion>
+</AccordionGroup>
+
+## Using Competitive Intel to validate build decisions
+
+Competitive Intel does two things that Discovery cannot: it grounds signals in real revenue numbers, and it tells you what migration waves look like before they peak. When you combine a developer complaint from Discovery with a revenue benchmark from Competitive Intel, you can estimate whether a product opportunity is worth pursuing and what you should charge.
+
+For example: Discovery shows developer frustration with $400/month social media scheduling tools. Competitive Intel shows that Tally reached $5M ARR as a bootstrapped form builder. Together these signals tell you that "simple tool, done well" is a viable SaaS thesis, that the infrastructure to run it costs €10/month, and that the migration audience is already active on Reddit.
+
+<CardGroup cols={2}>
+  <Card title="Discovery" icon="magnifying-glass-chart" href="/reports/discovery">
+    The raw signals — launches, complaints, and gaps — that Competitive Intel grounds in revenue data.
+  </Card>
+  <Card title="Action" icon="lightbulb" href="/reports/action">
+    How Competitive Intel data feeds into specific build and pricing recommendations.
+  </Card>
+  <Card title="Hacker News source" icon="newspaper" href="/sources/hacker-news">
+    How BuilderPulse tracks revenue discussions and trust events on Hacker News.
+  </Card>
+  <Card title="Reddit source" icon="reddit" href="/sources/reddit">
+    How Reddit's r/SaaS and r/SideProject provide indie revenue data.
+  </Card>
+</CardGroup>

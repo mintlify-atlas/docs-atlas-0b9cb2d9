@@ -1,0 +1,91 @@
+---
+title: "Tech Radar: shutdowns, fast-growing tools, and AI models"
+description: "What Tech Radar covers — product shutdowns, the fastest-growing dev tools, trending HuggingFace models, popular tech stacks, and what each means for builders."
+---
+
+Tech Radar is the second section of every BuilderPulse report. Where Discovery surfaces raw signals, Tech Radar interprets them in the context of the broader tooling ecosystem. It answers four questions: which major products shut down or were downgraded, which developer tools are growing fastest, which AI models are trending on HuggingFace and what consumer products they enable, and which tech stacks are the most popular Show HN projects using. Together these questions tell you where the tooling landscape is moving and which platform shifts are worth building for.
+
+## The four Tech Radar questions
+
+<AccordionGroup>
+  <Accordion title="Did any major company shut down or downgrade a product?" icon="power-off" defaultOpen={true}>
+    This question tracks product shutdowns, silent feature removals, and service downgrades from companies that developers depend on. It is one of the highest-signal questions in the report because every shutdown creates a vacuum, and every trust failure creates a migration moment.
+
+    The report distinguishes between three types of events: **full shutdowns** (a product is discontinued), **silent downgrades** (a service reduces scope without announcing it), and **licensing changes** (a project shifts from open to closed source or changes commercial terms).
+
+    **Real example — Cal.com goes closed source (April 16):** Cal.com [announced it was going closed source](https://cal.com/blog/cal-com-goes-closed-source-why), citing AI companies scraping open-source code to build competing products. The announcement scored 225 points on Hacker News; the community response post "Open Source Isn't Dead" scored an even higher 313 points and 167 comments. This is the first major "open source company closes because of AI scraping" case of 2026. The report's takeaway: "AI-resistant licensing" will become a standard consideration for open-source projects in 2026. Expect more projects adopting BSL (Business Source License) or similar restrictive licenses.
+
+    **Real example — Backblaze (April 15–16):** Backblaze silently stopped backing up OneDrive, Dropbox, and VeraCrypt-encrypted drives without customer notification. This isn't a formal shutdown but a material reduction in a paid service's value proposition. The 668-comment Hacker News discussion reads like a trust eulogy, with users migrating to restic, borg, and rclone. When a service silently narrows its scope, it creates immediate demand for a transparent alternative.
+
+    **Real example — OpenAI removing Study Mode (April 13–14):** OpenAI silently removed Study Mode from ChatGPT — no announcement, no migration path. This mode had ChatGPT act as a tutor rather than giving direct answers. For edtech founders, this signals a dropped priority on the education use case and opens a specific gap: AI tutoring that guides reasoning rather than providing answers.
+
+    **What to build from shutdowns:** Every shutdown or downgrade announcement is a pre-validated product brief. The former users are already active on Hacker News and Reddit, articulating exactly what they need. The report names the opportunity and estimates the audience size from the comment count.
+
+    <Tip>
+    Cal.com's licensing change follows the pattern of HashiCorp (BSL), Elastic (SSPL), and Redis (dual licensing) — but with a new AI-specific justification. If you maintain or are building an open-source project, now is the time to choose your license deliberately with AI scraping in mind.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="What are the fastest-growing developer tools this week?" icon="bolt">
+    This question pulls from GitHub Trending (weekly star counts), Hacker News vote tallies, and Product Hunt results to identify which developer tools are growing fastest. It separates infrastructure tools from application-layer tools, and labels growth that spans multiple platforms as a stronger signal.
+
+    **Real example — hermes-agent (April 16, 53,110 weekly stars):** [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) — "the agent that grows with you" — was the #1 trending repository on all of GitHub by an enormous margin. A Python-based agent framework that compounds skills over time. This is not a one-platform signal: it also had the highest Google Trends search growth ("hermes agent" variants up +100–130%) and appeared in Hacker News discussions. When a developer tool trends simultaneously on GitHub, Google, and HN, it is past the "early adopter" phase.
+
+    **Real example — andrej-karpathy-skills (April 15, 21,795 weekly stars):** [forrestchang/andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) is a single CLAUDE.md file — no code, no framework, no package. It contains instructions derived from Andrej Karpathy's observations on how to make AI coding tools work better. The fact that a configuration file was the #2 trending repository on all of GitHub tells you something important: the meta-layer of "instructions for AI coding tools" has become a high-value developer tool category in its own right.
+
+    **Real example — markitdown (April 16, 15,790 weekly stars):** [microsoft/markitdown](https://github.com/microsoft/markitdown) converts files and Office documents to Markdown. It is an unglamorous data pipeline tool — exactly the type of infrastructure that AI agents need to consume documents. Its sustained presence in GitHub Trending across multiple weeks indicates structural demand, not a spike.
+
+    **What this means for builders:** 7 of the top 10 GitHub trending repositories in the week of April 13–16 were Claude Code or AI agent tools. The developer tool market is being reshaped around agent-native architectures. The question is not whether to build for this platform shift but when.
+
+    <Note>
+    GitHub Stacked PRs shipped as an official GitHub feature in April 2026 — validating the stacked diff workflow and simultaneously killing the category of third-party tools that had been building around this gap (Graphite, ghstack, spr). When a platform ships the feature your third-party tool provides, the opportunity shifts to the next layer of the stack.
+    </Note>
+  </Accordion>
+
+  <Accordion title="What are the hottest HuggingFace models, and what consumer products could they enable?" icon="microchip">
+    This question tracks the HuggingFace trending model list — sorted by a composite trending score that weights recent downloads, likes, and discussion activity — and maps each model to a consumer product opportunity. The report focuses on models with Apache 2.0 or MIT licensing (commercially usable without restriction) and identifies the gap between "model exists" and "consumer product exists."
+
+    **Real example — MiniMax-M2.7 (April 16, trending score 797, 85K downloads):** A conversational text generation model trending at the top of HuggingFace. Consumer opportunity identified in the report: a local chatbot competitor to ChatGPT that runs on consumer hardware. The significance is the quality-to-cost ratio — MoE architecture makes it cheaper to run while remaining competitive in quality.
+
+    **Real example — VoxCPM2 + OmniVoice (April 13–16):** Two open-source TTS and voice cloning models trending simultaneously. VoxCPM2 (trending 759 on April 13, 48kHz quality) handles voice cloning and design; OmniVoice (trending 275, 606K downloads) handles zero-shot multilingual voice cloning. The report's consumer opportunity: "clone your voice with a 5-second recording, then turn any article/email/note into audio content read by you." OmniVoice's demo space was the #1 trending space on HuggingFace. The April 16 takeaway: "Voice AI is the most immediately monetizable category — podcast cloning and multilingual dubbing have proven willingness to pay, and these models now run locally."
+
+    **Real example — Netflix void-model (April 16, trending 190, 837 likes):** Netflix open-sourced their video inpainting and object removal model under Apache 2.0. Consumer opportunity: one-click video editing tools that remove unwanted objects — "Magic Eraser" for video. Netflix developed this for production use but released it publicly, bringing Hollywood-grade video editing AI to anyone.
+
+    **How to use this signal:** A trending HuggingFace model with commercial-friendly licensing and no consumer product wrapping it is an open slot. The report maps each model to a specific product category and identifies whether willingness to pay has already been validated elsewhere (as it has for audio content, where Eleven Labs' Music Marketplace already exists).
+  </Accordion>
+
+  <Accordion title="What tech stacks are the most popular Show HN projects using?" icon="layer-group">
+    This question analyzes the technology choices of the week's highest-performing Show HN projects. It identifies emerging patterns in what builders choose when they're shipping real products — not what they write about in blog posts, but what they actually deploy.
+
+    **Real example — React 19 + FastAPI + Postgres + Redis (LangAlpha, April 16):** [LangAlpha](https://github.com/ginlix-ai/langalpha) — described as "Claude Code but for Wall Street" — used this stack for a full-stack AI agent harness. @zc2610 explained the choices: FastAPI for streaming (SSE) and persistent state, React 19 for the frontend. The report's conclusion: "React 19 + FastAPI + Postgres is the default full-stack for AI agent products in 2026."
+
+    **Real example — Swift/AppKit for macOS utilities (boringBar, April 13–15):** Native macOS development remains the dominant choice for macOS utility apps. The boringBar launch showed that native macOS apps command premium pricing — and that developer communities will actively enforce the pricing model they expect (perpetual license, not subscription) in real time.
+
+    **Real example — Hetzner VPS + CRUD + OAuth + cron (open-source social media scheduler, April 14–16):** @Ok-Constant6488's replacement for $400/month SaaS tools runs on a €10/month Hetzner VPS. The stack description: "a CRUD app with OAuth integrations and a cron job." The simplicity is the point — there is no reason for scheduling software to cost $400/month when the infrastructure costs €10.
+
+    **Emerging pattern — "framework designed for agents":** [Plain](https://github.com/dropseed/plain) — a full-stack Python framework "designed for humans and agents" — appeared in April 15–16 Show HN. The report flagged this as an emerging pattern: expect more frameworks to add agent-native primitives as the default expectation for what a framework should handle.
+
+    <Info>
+    The most telling tech stack signal of the April 13 report was that a single .md file (andrej-karpathy-skills) earned 7,319 GitHub stars. Product value increasingly comes from data curation and problem definition, not from elaborate tech stacks. The simplest version of a product that solves the problem is usually the right starting point.
+    </Info>
+  </Accordion>
+</AccordionGroup>
+
+## How Tech Radar informs your decisions
+
+Tech Radar gives you the context to evaluate Discovery signals correctly. A surging search term for a tool category means more when you know that the #1 player in that category just went closed source. A new HuggingFace model matters more when you know the consumer product gap it could fill has already been validated by a Product Hunt launch with 300+ votes.
+
+<CardGroup cols={2}>
+  <Card title="Discovery" icon="magnifying-glass-chart" href="/reports/discovery">
+    The raw signals that Tech Radar adds context to.
+  </Card>
+  <Card title="Competitive Intel" icon="chart-line" href="/reports/competitive-intel">
+    Revenue and pricing data that grounds Tech Radar signals in real money.
+  </Card>
+  <Card title="HuggingFace source" icon="microchip" href="/sources/huggingface">
+    How BuilderPulse tracks and interprets HuggingFace trending models.
+  </Card>
+  <Card title="GitHub Trending source" icon="code-branch" href="/sources/github-trending">
+    How star velocity and trending data is collected and interpreted.
+  </Card>
+</CardGroup>

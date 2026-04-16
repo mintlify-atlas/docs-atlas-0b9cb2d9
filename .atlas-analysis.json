@@ -1,25 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "name": "BuilderPulse",
+  "projectType": "saas",
+  "projectName": "BuilderPulse",
+  "projectDescription": "AI-powered daily intelligence digest for indie hackers and builders, synthesizing signals from 10+ sources including Hacker News, GitHub, Product Hunt, HuggingFace, Google Trends, and Reddit into actionable build recommendations every morning.",
   "theme": "willow",
-  "colors": {
-    "primary": "#242b2c",
-    "light": "#6a6a6d",
-    "dark": "#ebeaea"
-  },
-  "favicon": "/favicon.svg",
-  "navbar": {
-    "primary": {
-      "type": "github",
-      "href": "https://github.com/BuilderPulse/BuilderPulse"
-    }
-  },
-  "footer": {
-    "socials": {
-      "github": "https://github.com/BuilderPulse/BuilderPulse",
-      "x": "https://x.com/bourneliu66"
-    }
-  },
+  "primaryColor": "#242b2c",
+  "lightColor": "#6a6a6d",
+  "darkColor": "#ebeaea",
   "navigation": {
     "tabs": [
       {
@@ -81,5 +67,23 @@
         ]
       }
     ]
-  }
+  },
+  "keyFeatures": [
+    "Daily AI-synthesized analysis of 300+ signals across 10+ sources",
+    "20 structured questions answered each morning covering launches, trends, and opportunities",
+    "Actionable build recommendations — what to build in 2 hours vs. a weekend",
+    "Fast-growing open-source project discovery with commercialization gap analysis",
+    "Trending search term radar with multi-source cross-validation",
+    "Developer tool complaint tracking to surface pain point opportunities",
+    "Bilingual reports in English and Chinese",
+    "RSS/Atom feed for continuous updates",
+    "Revenue and pricing case studies from real indie developers",
+    "Counter-intuitive finding of the day for contrarian builders"
+  ],
+  "publicApiSurface": [
+    "RSS/Atom feed: /commits/main.atom",
+    "Daily English reports: en/YYYY/YYYY-MM-DD.md",
+    "Daily Chinese reports: zh/YYYY/YYYY-MM-DD.md",
+    "Report sections: Discovery, Tech Radar, Competitive Intel, Trends, Action"
+  ]
 }

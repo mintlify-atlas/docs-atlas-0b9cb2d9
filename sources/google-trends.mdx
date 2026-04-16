@@ -1,0 +1,98 @@
+---
+title: "Google Trends: finding keywords before they peak"
+description: "BuilderPulse uses 7-day and 3-month Trends windows to find rising, peaking, and cooling search terms — giving you a timing edge before the crowd arrives."
+---
+
+Search volume is intent made visible. When someone searches for a term that barely existed last month, they're trying to understand something new — and the gap between "many people searching" and "good content existing" is where you can publish once and rank for months. BuilderPulse monitors Google Trends using a dual-window approach: a 7-day window to catch emerging terms, and a 3-month window to distinguish sustained trends from spikes. Comparing the two reveals whether a term is rising, plateauing, or cooling — giving you a timing signal that no other source provides.
+
+## The dual-window approach
+
+A term that ranks highly in the 7-day window but not the 3-month window is brand new — potentially a content vacuum that hasn't been claimed yet. A term that ranks in both windows has sustained momentum and is worth building around. A term that appears in the 3-month window but not the 7-day window is cooling — still worth referencing, but the discovery phase is over.
+
+| Pattern | What it means | What to do |
+|---------|--------------|------------|
+| 7-day only | Brand new, content vacuum | Publish an explainer immediately |
+| Both windows | Sustained, growing | Build a product or content hub |
+| 3-month only | Cooling or plateaued | Reference in context, don't lead with |
+| Neither | Noise or too niche | Skip |
+
+<Note>
+"Breakout" status in Google Trends means a term increased by more than 5,000% from its baseline — effectively rising from zero. BuilderPulse treats Breakout signals as the highest-priority new-word discoveries each week.
+</Note>
+
+## Real examples: surging terms
+
+### AI agent infrastructure (April 13–16, 2026)
+
+**"Claude managed agents"** — +3,750% in the 7-day window on April 13, holding at +3,400% by April 15, and settling to +950% by April 16 as the baseline adjusted. This is the week's strongest signal — a brand-new product category from Anthropic with near-zero prior search history. The related singular form "claude managed agent" surged between +650% and +1,400% across the same period.
+
+This term was dual-validated: Claude Code Routines simultaneously scored 700 points on Hacker News and 448 votes on Product Hunt in the same week. Three independent platforms confirming the same emerging concept — the highest-confidence signal type BuilderPulse produces.
+
+**"Hermes agent"** variants — "hermes agent github" (+130%), "hermes ai agent" (+90%), "hermes ai" (+90%). All corroborated by NousResearch/hermes-agent sitting at #1 on GitHub Trending with 53,110 weekly stars. When a search term maps directly to the top-trending repository on GitHub, the demand is unambiguous.
+
+### Self-hosting wave (April 13–16, 2026)
+
+Google Trends captured a broad self-hosting surge triggered by the Google/ICE data disclosure story on Hacker News (1,152 points):
+
+- **Vaultwarden** — Breakout status (self-hosted Bitwarden alternative)
+- **Gitea** — +300% (self-hosted Git)
+- **Joplin** — +250% and Breakout on some days (self-hosted notes)
+- **AppFlowy** — +130% (self-hosted Notion alternative)
+- **Syncthing** — +190% (self-hosted file sync)
+- **MinIO** — +80% (self-hosted object storage)
+- **Bitwarden self-hosted** — +60% to +90%
+
+This cluster is a single macro trend — privacy concerns driving migration to self-hosted alternatives — expressed across dozens of individual product names. BuilderPulse groups these into thematic clusters so you can see the macro narrative, not just the individual spikes.
+
+## Real examples: cooling terms
+
+### OpenClaw's hype cycle
+
+OpenClaw is the clearest cooling signal in the April reports. Over the 3-month window, "openclaw" hit Breakout status with an extracted value of 815,750 — the highest search volume of any AI term in the dataset. Related terms like "openclaw ai agent" (190,850), "openclaw github" (167,800), and "nanoclaw" (6,700) all showed similar breakout patterns.
+
+In the 7-day window during the same period, all of these terms were completely absent from rising queries. The curiosity phase — the period where people are searching to understand what something is — had definitively ended.
+
+<Info>
+OpenClaw cooling doesn't mean the product is dying. It means the discovery phase is over and the audience is now established users rather than newcomers. The opportunity shifts from "explain what OpenClaw is" (SEO content targeting new users) to "make OpenClaw work better" (tools and integrations for existing users).
+</Info>
+
+The same pattern appeared for: "moltbot," "moltbook," "clawdbot," "claude cowork," and "dokploy" — all showing Breakout in the 3-month window, absent from the 7-day window. Each of these represents a product whose search curiosity phase peaked and passed.
+
+## The "new word radar"
+
+BuilderPulse runs a dedicated new-word radar each week: terms rising from near-zero baseline, validated against at least one other source. These are the highest-priority SEO and product opportunities in each report.
+
+From the April 13–16 reports, the highest-confidence new-word signals were:
+
+- **"Claude managed agents"** — +3,750% from zero, validated across HN, GitHub, and Product Hunt
+- **"Hermes agent"** variants — +60–140% from zero, validated against GitHub #1 trending
+- **"Vaultwarden"** — Breakout, validated against the Google/ICE privacy story on HN
+- **"GLM 5.1"** — +160–300%, validated against HuggingFace #1 trending model
+- **"Databricks ai agent memory"** — +190%, no other source validation yet (external discovery)
+
+<Tip>
+External discoveries — terms rising on Google with no corresponding HN, GitHub, or Product Hunt signal — are worth watching but not acting on immediately. They might represent trends that haven't reached developer communities yet, or they might be noise. BuilderPulse flags them and tracks them across subsequent reports.
+</Tip>
+
+## Sustained momentum signals
+
+The rarest and most valuable Google Trends signal is a term that appears in both the 7-day AND the 3-month rising windows simultaneously. This means the term has been rising for at least three months and is still accelerating — not a spike, not a plateau, but compounding growth.
+
+From the April 16 report, **"fluxer"** was the only term (besides noise like "walmart near me") appearing in both windows — a +60% sustained signal indicating persistent, compounding growth rather than a one-time event.
+
+## How to act on Google Trends signals
+
+<AccordionGroup>
+  <Accordion title="Surging terms (7-day only, from near zero)">
+    Publish a clear, well-structured explainer immediately. Use the exact search phrase as your page title. A well-written "What are Claude managed agents?" published in the first week of a +3,750% surge can rank for months because the competition is thin. Speed matters more than comprehensiveness at this stage.
+  </Accordion>
+  <Accordion title="Sustained terms (both windows)">
+    Build a product or content hub. Sustained momentum means the audience is established and growing. A comparison table, an interactive tool, or a curated resource page built around a sustained keyword has a longer window to capture traffic and compound authority.
+  </Accordion>
+  <Accordion title="Cooling terms (3-month only)">
+    Don't lead with these terms, but reference them in context. If you're building a tool for the Claude ecosystem, mentioning OpenClaw in a comparison is still valid — the existing user base is established even if new curiosity has dried up. Avoid writing content that positions a cooling term as the primary subject.
+  </Accordion>
+  <Accordion title="Breakout self-hosting terms">
+    When multiple self-hosting tools surge simultaneously (as in April 2026), the macro signal is more important than any individual term. The opportunity is: build a comparison site, a one-click-deploy wrapper, or a migration guide targeting the "moving off [SaaS tool]" audience. These surges tend to run for weeks, not days.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,171 @@
+---
+title: "BuilderPulse RSS feed setup and reader recommendations"
+description: "Add the BuilderPulse Atom feed to any RSS reader, with setup steps for popular clients and tips for organizing daily reports in your reading workflow."
+---
+
+BuilderPulse publishes every daily report as a commit to its GitHub repository. GitHub exposes a standard Atom feed for every repository's commit history, which means you can subscribe to new BuilderPulse reports in any RSS reader — no special account or API key required. The feed updates the moment a new report is pushed.
+
+**Feed URL:**
+
+```text
+https://github.com/BuilderPulse/BuilderPulse/commits/main.atom
+```
+
+## What each feed item contains
+
+Each item in the Atom feed corresponds to one commit. For BuilderPulse, that means one daily report per item. Here is what you'll see in your reader:
+
+- **Title** — the commit message, which contains the report date and the day's top headline (for example: `BuilderPulse Daily — April 16, 2026`)
+- **Link** — points to the commit on GitHub, from which you can navigate directly to the `.md` report file
+- **Date** — the timestamp of the commit in Shanghai time
+- **Author** — Liu Xiaopai (刘小排), the author of BuilderPulse
+
+<Note>
+  The commit link leads to the GitHub commit page, not directly to the `.md` file. From there, click on the file name in the changed files list (for example `en/2026/2026-04-16.md`) to open the rendered report.
+</Note>
+
+## Setup by RSS reader
+
+<Tabs>
+  <Tab title="Feedly">
+    <Steps>
+      <Step title="Open Feedly">
+        Go to [feedly.com](https://feedly.com) and sign in.
+      </Step>
+      <Step title="Add a new feed">
+        Click **+ Add content** in the left sidebar.
+      </Step>
+      <Step title="Paste the feed URL">
+        Paste the feed URL into the search bar:
+
+        ```text
+        https://github.com/BuilderPulse/BuilderPulse/commits/main.atom
+        ```
+
+        Press Enter. Feedly will recognize it as an RSS/Atom feed.
+      </Step>
+      <Step title="Follow the feed">
+        Click **Follow** and choose or create a collection (for example, "BuilderPulse") to organize it.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="NetNewsWire">
+    <Steps>
+      <Step title="Open NetNewsWire">
+        Launch NetNewsWire on macOS or iOS.
+      </Step>
+      <Step title="Add a new feed">
+        Go to **File → New Feed** (macOS) or tap the **+** button (iOS).
+      </Step>
+      <Step title="Enter the feed URL">
+        Paste the feed URL:
+
+        ```text
+        https://github.com/BuilderPulse/BuilderPulse/commits/main.atom
+        ```
+      </Step>
+      <Step title="Choose a folder">
+        Select or create a folder named "BuilderPulse" or "Daily Reads" and click **Add**.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Reeder">
+    <Steps>
+      <Step title="Open Reeder">
+        Launch Reeder on macOS or iOS.
+      </Step>
+      <Step title="Add a feed">
+        Tap the **+** button or go to **Feeds → Add Feed**.
+      </Step>
+      <Step title="Paste the URL">
+        Enter the feed URL:
+
+        ```text
+        https://github.com/BuilderPulse/BuilderPulse/commits/main.atom
+        ```
+      </Step>
+      <Step title="Save">
+        Confirm and save. The feed will appear in your sidebar under the account you added it to.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Inoreader">
+    <Steps>
+      <Step title="Open Inoreader">
+        Go to [inoreader.com](https://www.inoreader.com) and sign in.
+      </Step>
+      <Step title="Add a subscription">
+        Click the **+** button in the left sidebar or go to **Add Subscription**.
+      </Step>
+      <Step title="Paste the feed URL">
+        Enter the feed URL:
+
+        ```text
+        https://github.com/BuilderPulse/BuilderPulse/commits/main.atom
+        ```
+
+        Click **Follow**.
+      </Step>
+      <Step title="Organize into a folder">
+        Right-click the new subscription and choose **Move to folder**. Create a "BuilderPulse" folder to keep it separate from other feeds.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="FreshRSS">
+    <Steps>
+      <Step title="Open FreshRSS">
+        Open your FreshRSS instance and sign in.
+      </Step>
+      <Step title="Go to Subscriptions">
+        Click **Subscriptions** in the top navigation, then **Add a feed**.
+      </Step>
+      <Step title="Enter the feed URL">
+        Paste the feed URL:
+
+        ```text
+        https://github.com/BuilderPulse/BuilderPulse/commits/main.atom
+        ```
+      </Step>
+      <Step title="Set a category">
+        Assign it to an existing category or create a new one (for example, "Intelligence") and click **Add**.
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
+
+## Telling English and Chinese commits apart
+
+The Atom feed includes commits for both the English edition (`en/`) and the Chinese edition (`zh/`). In practice, both editions are committed together as a single daily commit, so you will see one feed item per day covering both.
+
+If you inspect the commit message or the changed files in a given commit, you can identify which report is which by the file path:
+
+- English reports: `en/YYYY/YYYY-MM-DD.md`
+- Chinese reports: `zh/YYYY/YYYY-MM-DD.md`
+
+<Tip>
+  The Chinese edition report file always begins with Chinese characters in the title (`# BuilderPulse Daily — 2026 年 4 月 16 日`), making it easy to distinguish at a glance once you open the file.
+</Tip>
+
+## Organizing your reading workflow
+
+A few tips for keeping the daily reports useful without creating noise:
+
+- **Create a dedicated folder.** In any reader, put the BuilderPulse feed in its own folder or collection so it doesn't get buried in higher-volume feeds.
+- **Mark as read on open.** Configure your reader to automatically mark items as read when you open them. Since BuilderPulse publishes once per day, there's no risk of losing a report by marking it read.
+- **Use the commit link as a permalink.** Each feed item links to a stable GitHub commit URL. Bookmark individual reports for later reference using the commit link — it won't change.
+- **Skim the headline, read the Action section.** Each report's top-of-file summary and the "What should I build?" section give you the high-signal takeaway in under two minutes.
+
+<CardGroup cols={2}>
+  <Card title="Subscribe overview" icon="bell" href="/using/subscribe">
+    Compare all three subscription methods — GitHub Watch, RSS, and direct links.
+  </Card>
+  <Card title="Chinese edition" icon="language" href="/using/chinese-edition">
+    The BuilderPulse Chinese edition publishes alongside every English report.
+  </Card>
+  <Card title="Report structure" icon="list-check" href="/reports/overview">
+    Learn what the 20 daily questions cover and how to read a report efficiently.
+  </Card>
+  <Card title="Latest report" icon="newspaper" href="/archive/2026/april-16">
+    Read the April 16, 2026 report — the most recent issue in the archive.
+  </Card>
+</CardGroup>

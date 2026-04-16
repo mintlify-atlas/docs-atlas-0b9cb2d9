@@ -1,0 +1,97 @@
+---
+title: "Understanding the BuilderPulse daily report"
+description: "A guide to the 5 sections of every daily report — Discovery, Tech Radar, Competitive Intel, Trends, and Action — and what each delivers for builders."
+---
+
+Every BuilderPulse report follows the same five-section structure, published each morning after cross-referencing 300+ signals from Hacker News, GitHub, Product Hunt, HuggingFace, Google Trends, and Reddit. The structure is deliberate: it moves you from raw observation (what launched, what's growing, what's breaking) through pattern recognition (trends, VC focus, cooling signals) to a specific recommendation (what to build today, what to charge, and what the data says you're probably wrong about). Whether you have 2 hours or a full weekend, the report ends with an answer.
+
+## Report structure
+
+Each daily report answers 20 structured questions, organized into five sections. The sections build on each other — Discovery surfaces raw signals, Tech Radar adds context, Competitive Intel grounds it in revenue data, Trends shows direction, and Action turns everything into a build recommendation.
+
+<CardGroup cols={2}>
+  <Card title="Discovery" icon="magnifying-glass-chart" href="/reports/discovery">
+    Solo founder launches, surging search terms, open-source commercialization gaps, and developer complaints. The raw material.
+  </Card>
+  <Card title="Tech Radar" icon="satellite-dish" href="/reports/tech-radar">
+    Product shutdowns, the fastest-growing developer tools, trending HuggingFace models, and the most popular tech stacks this week.
+  </Card>
+  <Card title="Competitive Intel" icon="chart-line" href="/reports/competitive-intel">
+    Real revenue milestones, pricing model debates, dormant projects reviving, and migration articles signaling market shifts.
+  </Card>
+  <Card title="Trends" icon="arrow-trend-up" href="/reports/trends">
+    Keyword frequency shifts, VC and YC focus areas, cooling AI buzzwords, and brand-new concepts rising from near-zero search volume.
+  </Card>
+  <Card title="Action" icon="lightbulb" href="/reports/action">
+    Specific 2-hour and weekend build recommendations, pricing models to study, a counter-intuitive finding, and Product Hunt / dev tool overlaps.
+  </Card>
+</CardGroup>
+
+## The "Top 3" summary
+
+Every report opens with a three-item summary of the day's most important signals. These are not the most-upvoted stories — they are the signals with the highest cross-source validation. A story that appears on Hacker News, GitHub Trending, and Google Trends simultaneously is weighted far above one that appears on only a single platform.
+
+Here is the Top 3 from the April 16, 2026 report as an example:
+
+<Note>
+**Today's top 3 — April 16, 2026**
+
+1. Google's data handover to ICE ignites a self-hosting surge — vaultwarden, gitea, and joplin all hit record search demand this week
+2. AI agent infrastructure becomes the new platform war — hermes-agent captures 53K GitHub stars in one week while "claude managed agents" surges +950% on Google Trends
+3. Cal.com goes closed source, sparking the fiercest open-source licensing debate of 2026 — a direct response post "Open Source Isn't Dead" draws 313 points
+</Note>
+
+Each Top 3 item is self-contained: it names the signal, quantifies it, and states its implication in a single sentence. When you read the full report, each item connects to specific sections where the supporting data lives.
+
+## How the sections connect
+
+The report is designed to be read linearly, but it also works as a reference. If you only have five minutes, read the Top 3 and the Action section. If you have more time, read Discovery and Trends to understand the underlying signals before reaching Action's recommendations.
+
+<Steps>
+  <Step title="Start with Discovery">
+    Discovery answers four questions about what happened today: what launched, what's being searched, what open-source tools lack a commercial layer, and what developers are frustrated with. These are the raw signals before any interpretation.
+  </Step>
+  <Step title="Add context with Tech Radar">
+    Tech Radar answers what those signals mean in the context of the broader tooling ecosystem — which companies are pulling back, which tools are accelerating, and which AI models are reaching consumer-ready quality.
+  </Step>
+  <Step title="Ground it in Competitive Intel">
+    Competitive Intel adds revenue and pricing data from indie developers sharing real numbers publicly. This is where you learn that a specific tool generates $10K MRR on a $20/month tech stack, or that a bootstrapped form builder hit $5M ARR with AI search as its top acquisition channel.
+  </Step>
+  <Step title="Understand direction with Trends">
+    Trends shows you where the market is moving — which keywords are accelerating, which are plateauing, and which concepts are so new that almost no content exists for them yet.
+  </Step>
+  <Step title="Act on the recommendations">
+    Action synthesizes everything into specific build recommendations. It tells you what to build in 2 hours versus a full weekend, explains the reasoning, and surfaces the one finding that contradicts what you'd expect.
+  </Step>
+</Steps>
+
+## Confidence signals
+
+BuilderPulse distinguishes between high-confidence and external signals. A **high-confidence signal** appears in at least two independent data sources simultaneously — for example, a search term rising on Google Trends that also maps to a #1 GitHub trending repository. An **external signal** appears in only one source and is flagged as unvalidated, meaning it may be worth watching but hasn't been confirmed by corroborating data.
+
+<Tip>
+When the report labels a signal "dual-validated" — as with "claude managed agents" surging +3,750% on Google Trends while hermes-agent holds the #1 GitHub trending position — that is the highest-conviction category. These are the signals most worth acting on immediately.
+</Tip>
+
+## Explore each section
+
+<CardGroup cols={2}>
+  <Card title="Discovery" icon="magnifying-glass-chart" href="/reports/discovery">
+    Launches, search surges, GitHub gaps, developer complaints.
+  </Card>
+  <Card title="Tech Radar" icon="satellite-dish" href="/reports/tech-radar">
+    Shutdowns, fast-growing tools, HuggingFace models, tech stacks.
+  </Card>
+  <Card title="Competitive Intel" icon="chart-line" href="/reports/competitive-intel">
+    Revenue milestones, pricing models, revivals, migration articles.
+  </Card>
+  <Card title="Trends" icon="arrow-trend-up" href="/reports/trends">
+    Keyword shifts, VC focus, cooling buzzwords, new-word radar.
+  </Card>
+  <Card title="Action" icon="lightbulb" href="/reports/action">
+    What to build, how to price it, what the data surprised you with.
+  </Card>
+  <Card title="Sources" icon="database" href="/sources/overview">
+    The six sources powering BuilderPulse and how each one is weighted.
+  </Card>
+</CardGroup>

@@ -1,0 +1,99 @@
+---
+title: "Discovery: launches, search trends, and open-source gaps"
+description: "What Discovery covers — solo founder launches, surging search terms, GitHub commercialization gaps, and developer complaints that signal unmet demand."
+---
+
+Discovery is the first section of every BuilderPulse report, and it answers four questions that together give you a daily snapshot of where opportunity is forming. It covers what indie developers actually shipped, which search terms are rising abnormally fast, which open-source projects have traction without a commercial wrapper, and what tools developers are publicly frustrated with. Each question uses a different data source — Product Hunt and Hacker News Show HN for launches, Google Trends for search, GitHub Trending for open-source gaps, and Hacker News and Reddit comments for complaints. Together they surface raw signals before any interpretation is applied.
+
+## The four Discovery questions
+
+<AccordionGroup>
+  <Accordion title="What solo-founder products launched today?" icon="rocket-launch" defaultOpen={true}>
+    This question tracks genuine solo and small-team launches on Hacker News Show HN, Product Hunt, and Reddit's r/SideProject. The goal is not to catalog every launch but to identify the ones with meaningful community response — which tells you something real about demand.
+
+    The report pays attention to three things in each launch: the problem being solved, the community's reaction (vote and comment counts), and the pricing or business model. When community feedback directly changes the product — as happened with **boringBar** by @a-ve on April 13, 2026 — the report documents that feedback loop in detail.
+
+    **What boringBar showed you:** @a-ve launched a macOS dock replacement with subscription pricing and faced immediate, unanimous pushback. The founder pivoted to a $40 perpetual license within hours of posting. This real-time pricing experiment — 165 comments almost exclusively about the pricing model — is one of the most actionable signals you can get: macOS utility users have a structural aversion to subscriptions that perpetual pricing solves.
+
+    **What to look for:** Pay attention to the "built in a few hours" and "I built this because I was paying $X/month" origin stories. These are the highest-signal launches because the builder has already validated a personal pain point with their own wallet. @Ok-Constant6488's open-source social media scheduler — built because his girlfriend was paying $400/month across Sendible and Later, now running on a €10/month Hetzner VPS — is the archetype.
+
+    **How to act on it:** If a launch scores 150+ points on Hacker News Show HN with 50+ comments, the demand is real. Read the comments for feature requests (these are free product roadmap ideas) and for pricing feedback (this tells you exactly what the market will and won't pay).
+
+    <Tip>
+    Comments on Show HN launches are often more valuable than the launch itself. @thedougd's suggestion to add graph visualizations to **TracksSuccession** (a SEC filing tracker that scored 172 points on April 16) is a free feature expansion signal from a potential customer.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="Which search terms are surging abnormally?" icon="magnifying-glass-chart">
+    This question pulls from Google Trends, comparing 7-day rising queries against 3-month baselines to identify terms growing significantly faster than their historical rate. The report distinguishes between two tiers of confidence:
+
+    **High-confidence signals** are search terms that are rising on Google Trends AND appear in at least one other data source (GitHub Trending, Hacker News, or Product Hunt). These are the signals worth acting on immediately.
+
+    **External signals** appear only in Google search data, with no corroboration yet. They are flagged as early indicators — worth watching, but not yet confirmed by community behavior.
+
+    **Real example — "claude managed agents" at +3,750% (April 13):** This term went from near-zero to the highest growth rate of any AI term in the dataset in a single week. It was simultaneously validated by hermes-agent reaching #1 on GitHub Trending and Claude Code Routines scoring 700 points on Hacker News. This three-source validation makes it a maximum-confidence signal. For SEO content creators, this represents a keyword with enormous search volume and almost no existing quality content — a content vacuum.
+
+    **Real example — the self-hosting cluster (April 16):** "vaultwarden" hit Breakout status (effectively infinite growth from near-zero), while "gitea" rose +300%, "joplin" +250%, and "appflowy" +130% — all in the same week. No single one of these is remarkable alone. All four rising simultaneously maps to a macro event: Google's data handover to ICE triggered a privacy-driven migration to self-hosted alternatives. The cluster is the signal.
+
+    **How to act on it:** A rising search term with thin existing content is an SEO opportunity. "Claude managed agents" at +3,750% with almost no quality articles ranking is a window that closes within weeks. The report tells you when to move.
+  </Accordion>
+
+  <Accordion title="Which fast-growing open-source projects on GitHub lack a commercial version?" icon="code-branch">
+    This question scans GitHub Trending for projects accumulating thousands of stars per week without a SaaS layer, enterprise tier, or managed hosting option. It identifies the commercialization gap — the distance between "popular open-source tool" and "paying product."
+
+    The analysis looks at star velocity (weekly stars as a leading indicator of sustained interest), license type (MIT or Apache 2.0 signals commercial friendliness), the presence or absence of a pricing page, and whether the project description already reads like a SaaS pitch.
+
+    **Real example — hermes-agent (April 16, 53,110 weekly stars):** [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent), described as "the agent that grows with you," hit 53,110 weekly stars — the #1 trending repository on all of GitHub — with no hosted version, no managed service, no enterprise tier, and no pricing page. At this velocity, the gap between "free open-source framework" and "commercial agent platform" is enormous. Whoever builds the managed hermes-agent cloud first has a validated, massive audience waiting.
+
+    **Real example — multica (April 16, 10,864 weekly stars):** [multica-ai/multica](https://github.com/multica-ai/multica) already describes itself as "the open-source managed agents platform — turn coding agents into real teammates." The product description reads like a SaaS pitch. The only missing piece is a pricing page. TypeScript-based, no paid tier yet.
+
+    **Real example — claude-mem (April 16, 10,779 weekly stars):** [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) automatically captures and compresses everything Claude does during coding sessions. It is a plugin with no monetization path — inside an ecosystem (Claude Code) generating enormous search demand and community interest.
+
+    **How to act on it:** The clearest commercialization plays are managed hosting (for frameworks like hermes-agent), enterprise support tiers (for tools adopted by teams), and marketplaces (for ecosystems like Claude Code skills). The report identifies which gap is widest each week.
+
+    <Note>
+    The entire top 10 of GitHub Trending in the week of April 13–16 was AI agent infrastructure. When an entire category goes open-source simultaneously, the "configuration/management/monitoring" layer is typically the commercial vacuum — building "Vercel for AI agents" or "Datadog for agent runs" is the clearest direction.
+    </Note>
+  </Accordion>
+
+  <Accordion title="What tools are developers complaining about?" icon="triangle-exclamation">
+    Developer frustration is one of the most reliable leading indicators of product opportunity. This question tracks Hacker News stories and Reddit threads where developers are publicly expressing pain with existing tools — measured by vote count, comment count, and the sentiment of the comments themselves.
+
+    The report looks for three patterns: **silent changes** (companies changing behavior without notifying users), **trust failures** (a service failing at its core promise), and **pricing shocks** (costs rising unexpectedly or without warning).
+
+    **Real example — Backblaze (April 15–16, 1,103 points, 668 comments):** Backblaze silently excluded OneDrive, Dropbox, and VeraCrypt-encrypted drives from backup without customer notification. Users discovered the gap only when they tried to restore files. @julianozen: "We had learned that this policy had changed a few months ago, and we were never notified. File was unrecoverable." @mcherm: "Trust is somewhat difficult to earn, but easy to lose and nearly IMPOSSIBLE to regain." With 668 comments — the most-discussed story of the week — this is a pre-built audience ready to try an alternative. The report named a specific opportunity: a "Backblaze but transparent" personal backup service with clear exclusion policies and restore guarantees.
+
+    **Real example — Claude Code quota (April 13, 558 + 498 points):** Two simultaneous Hacker News stories — "Pro Max 5x quota exhausted in 1.5 hours despite moderate usage" and "Anthropic downgraded cache TTL on March 6th" — combined for over 1,000 points. Developers paying $200/month were burning through quota in 90 minutes. The report identified the specific opportunity: a Claude Code usage monitoring and budget control tool, with the target users visible in GitHub Issues right now.
+
+    **How to act on it:** The formula is straightforward: high-vote + high-comment developer frustration story → identify the specific failure → build the transparent, reliable alternative. The audience is already angry and searching for alternatives. Launch while the discussion is still active.
+
+    <Tip>
+    The common thread across Backblaze, Google, and Anthropic in the April 16 report is silent breakage — companies changing behavior without notification. Builders who differentiate by being transparent about changes and offering monitoring tools that alert users to silent degradations have a structural advantage.
+    </Tip>
+  </Accordion>
+</AccordionGroup>
+
+## Reading Discovery as a system
+
+The four Discovery questions are more valuable together than individually. A search term rising on Google Trends becomes more actionable when it maps to a GitHub project with no commercial layer. A developer complaint becomes more actionable when it maps to a search cluster showing people actively looking for alternatives.
+
+<Info>
+When Discovery shows a surging search term (like "self-hosted" alternatives) that also maps to a specific developer complaint (Google/ICE data story) and an open-source gap (vaultwarden with no managed hosting), you have a complete opportunity: proven demand, a specific audience, and a product category with no dominant commercial player yet.
+</Info>
+
+The Discovery section feeds directly into the Competitive Intel section (for revenue data on comparable products) and the Action section (for a specific build recommendation). Reading all three together gives you the full picture.
+
+<CardGroup cols={2}>
+  <Card title="Tech Radar" icon="satellite-dish" href="/reports/tech-radar">
+    What the Discovery signals mean in the context of the broader tooling ecosystem.
+  </Card>
+  <Card title="Action" icon="lightbulb" href="/reports/action">
+    How Discovery signals are synthesized into specific build recommendations.
+  </Card>
+  <Card title="Google Trends source" icon="magnifying-glass" href="/sources/google-trends">
+    How the report uses Google Trends data to identify surging search terms.
+  </Card>
+  <Card title="GitHub Trending source" icon="code-branch" href="/sources/github-trending">
+    How GitHub star velocity is used to identify commercialization gaps.
+  </Card>
+</CardGroup>

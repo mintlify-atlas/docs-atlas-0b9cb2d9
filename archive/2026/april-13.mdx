@@ -1,0 +1,139 @@
+---
+title: "April 13 2026: AI benchmarks broken, agent frameworks surge"
+description: "Berkeley proves all 8 top AI benchmarks can be gamed. Hermes-agent hits 38K stars. Claude managed agents surges 3,750%. Build: comparison article."
+---
+
+April 13 is the day the AI industry's measurement infrastructure collapsed under scrutiny. Berkeley's research team found that all 8 of the most authoritative AI agent benchmarks — SWE-bench, WebArena, OSWorld, GAIA, and others — can be exploited to achieve near-perfect scores without solving any actual tasks. At the same time, hermes-agent topped GitHub with 38,426 stars in one week, "claude managed agents" surged 3,750% on Google Trends, and a lean bootstrapper's "$10K MRR on $20/month" article earned 842 points and 468 comments by proving VC funding is often a liability, not an asset.
+
+## Top 3 highlights
+
+<Note>
+**1. AI agent framework explosion.** Hermes-agent topped GitHub with 38,426 stars in a single week. "Claude managed agents" surged +3,750% on Google Trends. But simultaneously, Berkeley researchers proved that AI evaluation benchmarks have been fully compromised — every major leaderboard score is potentially gamed. Redis founder @antirez: "completely broken methodology, with a big conflict of interest."
+</Note>
+
+<Note>
+**2. "$10K MRR on $20/month."** @tradertef's lean tech stack article scored 842 points and 468 comments. The stack: $5–10 VPS + SQLite WAL mode + Go single binary + GitHub Copilot Chat. The punchline: VCs keep rejecting him because he doesn't need their money. His pitch night feedback: "What do you even need funding for?" @senko: "If this sounds like basic advice, consider there are a lot of people out there that believe they have to start with serverless, kubernetes, fleets of servers."
+</Note>
+
+<Note>
+**3. Spain's LaLiga football copyright enforcement accidentally took down Docker, Cloudflare, and related developer services.** The blanket IP blocking drew 717 points and intense global discussion on IP blocking mechanisms. @danirod: "My ISP just drops traffic to the affected IPs. No ping, no traceroute, just a spinner." @torben-friis, a Spanish resident: "I would be very happy if Cloudflare stops serving Spain. The situation is beyond stupid."
+</Note>
+
+## Key signals this day
+
+<CardGroup cols={2}>
+  <Card title="Berkeley: 8 benchmarks, all gameable" icon="flask" href="https://rdi.berkeley.edu/blog/trustworthy-benchmarks-cont/">
+    1,235 points, 328 comments — the highest-scoring HN post of the day. The research found every major AI agent benchmark can be exploited for near-perfect scores without solving tasks. "No reasoning. No capability. Just exploitation of how the score is computed."
+  </Card>
+  <Card title="Hermes-agent: 38K stars in one week" icon="star" href="https://github.com/NousResearch/hermes-agent">
+    NousResearch's "agent that grows with you" hit 38,426 weekly stars — GitHub site-wide #1. No SaaS layer, no pricing page. The managed hermes-agent cloud is explicitly unclaimed territory.
+  </Card>
+  <Card title="boringBar pricing flip: subscription → perpetual" icon="apple" href="https://boringbar.app/">
+    280 HN points, 165 comments. @a-ve launched with a subscription, faced unanimous community rejection, and switched to a $40 perpetual license the same day. The entire comment section discussed pricing, not features.
+  </Card>
+  <Card title="Pardonned.com: 483 points" icon="gavel" href="https://pardonned.com/">
+    @vidluther built a US presidential pardon records search engine — public records turned into a searchable product. @varenc noted all data loads in a single page load. The value is entirely in curation, not infrastructure.
+  </Card>
+  <Card title="Claudraband: Claude Code for power users" icon="terminal" href="https://github.com/halfwhey/claudraband">
+    101 HN points. Part of a growing Claude Code-specific tooling ecosystem that's forming its own platform layer — skills, memory, token optimizers, and harness builders launching simultaneously.
+  </Card>
+  <Card title="Cirrus Labs joins OpenAI" icon="building" href="https://cirruslabs.org/">
+    279 points, 139 comments. The CI/CD tooling company's acquisition by OpenAI means its independent product roadmap is now uncertain. AI agents need to automatically deploy and test code — this acquisition signals OpenAI taking that layer seriously.
+  </Card>
+</CardGroup>
+
+### Trending keywords
+
+The clearest search signals of the day:
+
+- **"claude managed agents"** — +3,750%, rising from zero. Dual-validated by hermes-agent's #1 GitHub position and two high-scoring HN posts on Claude Code quota exhaustion (558 points) and cache TTL downgrade (498 points).
+- **"hermes agent"** variants — +60% to +90% across hermes agent, hermes ai, hermes agent github. All corroborated by GitHub Trending position.
+- **"claude mythos"** — +500%, corresponding to the Berkeley benchmark paper (1,235 points). Anthropic's vulnerability discovery system entered developer consciousness this week.
+- **"joplin"** — +250%, an open-source note app. Part of the self-hosted migration wave.
+- **"syncthing"** — +190%, self-hosted file sync. Echoes the France government dropping Windows for Linux story (489 points).
+- **"goose ai agent"** — +150%, Block/Square's open-source AI agent. A leading indicator not yet visible in GitHub Trending — watch for it next week.
+
+### Pricing intelligence
+
+**boringBar's flip** (subscription → $40 perpetual) is one data point in a pattern. The entire 165-comment section discussed pricing rather than features. @sonofhans: "I have apps on Macs that are over 20 years old. I'm not going to risk paying $100 for a decade of your app." The market verdict for macOS utility software: perpetual licenses in the $30–50 range, not subscriptions.
+
+**The $10K MRR model** runs at approximately 99.5% gross margin. @aleda145 extended this: using fly.io suspend + litestream brings backend costs down to $0.10/month. At $10K MRR with near-zero costs, you're generating $120K/year in near-pure profit — but the cost is that no VC will fund you, because you don't need them.
+
+**$228/month → $22K/month pipeline.** @Capable_Document3744's LinkedIn automation: RB2B ($99/month, identifies website visitors) + Clay ($79/month, enriches data) + SalesRobot ($50/month, 5 SDR accounts). 1,000 new leads per account per month, 16% reply rate. That's a 96:1 ROI on tool spend — and a repeatable B2B acquisition playbook for under $250/month.
+
+**The $50K lifetime deal regret.** Reddit's @Strong_Teaching8548: "Sold 340 copies of $149 lifetime licenses for $50K revenue. Did the math 18 months later — monthly subscriptions would have generated $93K, leaving $42K on the table." Lifetime licenses also mean perpetual service obligations.
+
+## Tech radar
+
+**"The End of Eleventy"** (207 points, 175 comments). The popular static site generator is winding down. Teams using Eleventy should evaluate Astro, Hugo, or Next.js. An "Eleventy to Astro" automatic converter is a short-term niche opportunity.
+
+**Cirrus Labs → OpenAI.** If you're using Cirrus CI, treat this as a signal to start evaluating alternatives. Acquisitions of this type typically result in the acquired product being sunset or folded into the acquirer's platform within 12–18 months.
+
+**OpenAI silently removed Study Mode from ChatGPT** (168 points). The tutoring feature that made ChatGPT guide students toward reasoning rather than giving direct answers was removed without announcement. Gap in the edtech AI space.
+
+**GLM-5.1 open sourced under MIT license.** [zai-org/GLM-5.1](https://huggingface.co/zai-org/GLM-5.1) hit #1 on HuggingFace trending (score 1,081) — a MoE architecture text generation model with bilingual EN/ZH support. MIT license means unrestricted commercial use. "glm 5.1" is up +300% in Google search.
+
+**France's government drops Windows for Linux** (489 points, 286 comments). A government-level migration citing US tech companies as a strategic risk. A significant win for Linux services and training markets in Europe.
+
+<Info>
+The Berkeley benchmark paper has a direct implication for how you evaluate AI tools: stop trusting leaderboard numbers. Test models against your own specific, real-world scenarios. The benchmarks that informed every model selection decision in the past year may have been measuring gaming ability, not task performance.
+</Info>
+
+## Build recommendation
+
+**2-hour project: AI Agent Framework Comparison 2026 article**
+
+The search vacuum is confirmed: "claude managed agents" +3,750%, "ai agent frameworks" +80%, "hermes agent github" +90% — massive developer search volume with no article that puts hermes-agent, multica, Archon, and goose together in one comparison table.
+
+You already have the data: GitHub Trending stats (stars/week, language, positioning), HuggingFace model support, Product Hunt tool ecosystem, and HN comment developer feedback.
+
+Build a static page on Astro or Hugo with the title "AI Agent Frameworks Compared: hermes-agent vs multica vs Archon vs goose (2026)." Core content is a comparison table: framework × GitHub stars × language × architecture × pricing × use cases. Add a 200-word mini-review with a code example link for each framework. Deploy to Vercel, post to HN and Reddit.
+
+Why this works: andrej-karpathy-skills is just a .md file that earned 7,319 GitHub stars, proving "AI best practices content" has enormous reach. A well-structured comparison article captures organic search traffic for months.
+
+**Weekend expansion: AI Agent Cost Calculator**
+
+The pain is validated from multiple angles:
+- Claude Code Pro Max quota exhausted in 1.5 hours (558 points, 510 comments)
+- Anthropic cache TTL downgrade (498 points, 384 comments)
+- Edgee Codex Compressor on Product Hunt — "Use Codex at 35.6% lower costs" (139 votes)
+- Ray — "personal CFO in the terminal" (233 votes)
+
+Build an interactive calculator: input your agent workload, calculate monthly cost comparison across Claude, OpenAI, and open-source self-hosted alternatives. Add a "Weekly Cost Report" email subscription. Use real case data from Reddit/HN as landing page social proof ($228/month → $22K pipeline, $10K MRR/$20 monthly cost). The comparison article and cost calculator drive traffic to each other — content solves "which to choose," tools solve "how much to spend."
+
+<Tip>
+The core logic connecting both projects: developers have shifted from "trying AI agents" to "deploying AI agents in production." The first question in production is always cost. You're not building AI tools — you're building the infrastructure that makes AI tools economically viable at scale.
+</Tip>
+
+## Counter-intuitive findings
+
+**All 8 AI benchmarks can be gamed for near-perfect scores.** Berkeley's team systematically audited SWE-bench, WebArena, OSWorld, GAIA, and four others. Every single one can be exploited without solving any actual tasks. This means every model comparison, investment decision, and technology selection based on benchmark scores over the past year may have been built on sand. For indie developers, the implication is clear: don't chase leaderboards; test models against your own real-world scenarios.
+
+**A single .md file earned 7,319 GitHub stars.** [andrej-karpathy-skills](https://github.com/forrestchang/andrej-karpathy-skills) contains just one CLAUDE.md file. More stars than many fully-developed products that took months to build. Content is not code, but content can be a product.
+
+**VCs reject you because you're too profitable.** @tradertef opens his 842-point article with: "I was rejected from yet another pitch night. The feedback was simply: 'What do you even need funding for?'" The extreme lean bootstrapper enters a paradox — margins too high to attract investment, because VCs invest in growth potential, not current profit. 468 comments show this resonates deeply.
+
+**macOS tool users' aversion to subscriptions is structural, not a price issue.** The entire boringBar comment section (165 comments) almost exclusively discussed the pricing model. The product was well-received; the subscription scared everyone away. @fii: "For free, I can use Alfred/Raycast, Aerospace, and sketchybar and have all this functionality." The developer switched to perpetual licensing the same day. This isn't user feedback — it's a market verdict.
+
+## Explore related reports
+
+<CardGroup cols={2}>
+  <Card title="Trends section" icon="chart-line" href="/reports/trends">
+    How BuilderPulse tracks keyword velocity across Google Trends and all six sources.
+  </Card>
+  <Card title="Reddit signals" icon="comments" href="/sources/reddit">
+    Revenue disclosures, pricing pivots, and founder stories from r/SaaS and r/SideProject.
+  </Card>
+  <Card title="Next report: April 14" icon="calendar-day" href="/archive/2026/april-14">
+    14K stars for a single CLAUDE.md file. Agent skills marketplace gap. $10K MRR revisited.
+  </Card>
+  <Card title="Reports overview" icon="newspaper" href="/reports/overview">
+    All seven sections of the BuilderPulse daily report, explained.
+  </Card>
+</CardGroup>
+
+---
+
+<Note>
+Read the full April 13 report on GitHub: [BuilderPulse/en/2026/2026-04-13.md](https://github.com/BuilderPulse/BuilderPulse/blob/main/en/2026/2026-04-13.md)
+</Note>

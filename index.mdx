@@ -1,97 +1,63 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "BuilderPulse: Daily intelligence for indie hackers"
+description: "AI-powered daily briefings synthesizing 300+ signals from Hacker News, GitHub, Product Hunt, HuggingFace, Google Trends, and Reddit into what to build next."
 ---
 
-## Setting up
+BuilderPulse publishes a daily intelligence report for indie hackers and builders — answering 20 structured questions every morning about what launched, what's trending, what developers are complaining about, and what you should build today. Reports are available in English and Chinese, delivered via GitHub and RSS.
 
-Get your documentation site up and running in minutes.
-
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
-
-## Make it yours
-
-Design a docs site that looks great and empowers your users.
-
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+<CardGroup cols={2}>
+  <Card title="How it works" icon="gears" href="/how-it-works">
+    Learn how BuilderPulse synthesizes 300+ signals from 10+ sources into daily build recommendations.
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="Quick start" icon="rocket" href="/quickstart">
+    Subscribe to daily reports and start finding opportunities in under 5 minutes.
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="Understanding reports" icon="newspaper" href="/reports/overview">
+    Explore each section of the daily report — Discovery, Tech Radar, Competitive Intel, Trends, and Action.
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="Report archive" icon="clock-rotate-left" href="/archive/2026/april-16">
+    Browse the full archive of past daily reports going back through 2026.
   </Card>
-</Columns>
+</CardGroup>
 
-## Create beautiful pages
+## What you get every morning
 
-Everything you need to create world-class documentation.
+BuilderPulse answers the questions that matter most to builders — sourced from real data, not opinion.
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
+<CardGroup cols={2}>
+  <Card title="Solo founder launches" icon="rocket-launch" href="/reports/discovery">
+    What indie developers shipped today and what the community response tells you about demand.
   </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
+  <Card title="Surging search terms" icon="magnifying-glass-chart" href="/reports/discovery">
+    Which keywords are rising abnormally on Google Trends, cross-validated against GitHub and Hacker News.
   </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
+  <Card title="Open-source gaps" icon="code-branch" href="/reports/discovery">
+    Fast-growing GitHub repos with no commercial version — the commercialization vacuum you can fill.
   </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
+  <Card title="Developer complaints" icon="triangle-exclamation" href="/reports/discovery">
+    What tools developers are publicly frustrated with — every complaint is a product opportunity.
   </Card>
-</Columns>
+  <Card title="What to build" icon="lightbulb" href="/reports/action">
+    Specific 2-hour and weekend project recommendations with validated pain signals and revenue estimates.
+  </Card>
+  <Card title="Pricing intelligence" icon="chart-line" href="/reports/competitive-intel">
+    Real revenue numbers and pricing models from indie developers sharing results publicly.
+  </Card>
+</CardGroup>
 
-## Need inspiration?
+## Get started
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+<Steps>
+  <Step title="Star and watch the repository">
+    Go to [github.com/BuilderPulse/BuilderPulse](https://github.com/BuilderPulse/BuilderPulse) and click **Watch → All Activity** to get notified of every new report.
+  </Step>
+  <Step title="Subscribe via RSS">
+    Add the Atom feed to your RSS reader: `https://github.com/BuilderPulse/BuilderPulse/commits/main.atom` — every daily report appears as a new commit.
+  </Step>
+  <Step title="Read today's report">
+    Open the latest English report at `en/YYYY/YYYY-MM-DD.md` or the Chinese edition at `zh/YYYY/YYYY-MM-DD.md`.
+  </Step>
+  <Step title="Act on the recommendations">
+    Jump to the **Action** section of each report for specific build recommendations with validated demand signals.
+  </Step>
+</Steps>

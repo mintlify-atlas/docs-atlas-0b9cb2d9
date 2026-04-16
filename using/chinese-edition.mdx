@@ -1,0 +1,111 @@
+---
+title: "BuilderPulse Chinese edition (中文版)"
+description: "BuilderPulse publishes a full Simplified Chinese edition daily at zh/YYYY/YYYY-MM-DD.md, covering the same 20 intelligence questions as the English report."
+---
+
+BuilderPulse publishes a full Chinese-language edition alongside every English report. The Chinese edition — known as 中文版 — is not a translation. It covers the same 20 structured questions and draws from the same 300+ signals across Hacker News, GitHub, Product Hunt, HuggingFace, Google Trends, and Reddit, but it is written for a Chinese-speaking builder audience, with framing and emphasis suited to that context. Both editions publish daily, timestamped to Shanghai time.
+
+## File path format
+
+Chinese edition reports live in the `zh/` directory of the repository, organized by year:
+
+```text
+zh/YYYY/YYYY-MM-DD.md
+```
+
+For example, the April 16, 2026 Chinese report is at:
+
+```text
+zh/2026/2026-04-16.md
+```
+
+You can browse the full Chinese archive at [`zh/`](https://github.com/BuilderPulse/BuilderPulse/tree/main/zh) in the repository.
+
+## How it differs from a translation
+
+The Chinese edition is written from scratch in Chinese, not machine-translated from the English report. While both editions answer the same 20 questions using the same underlying data, the Chinese edition:
+
+- Uses phrasing and framing natural to a Chinese-speaking builder audience
+- Adds inline contextual notes in parentheses for cultural or situational clarity (for example: `（数据找不回来了）` appended after a quote about unrecoverable files)
+- Structures takeaways for builders who may be working in Chinese-language markets or with different regulatory contexts
+
+This means the two editions can be read independently — you don't need to cross-reference the English version to understand the Chinese one.
+
+## About the author
+
+BuilderPulse is written by **Liu Xiaopai (刘小排)**, a builder and writer who produces both the English and Chinese editions daily. You can follow him on GitHub at [@liuxiaopai-ai](https://github.com/liuxiaopai-ai) or on 𝕏 at [@bourneliu66](https://x.com/bourneliu66).
+
+## Report structure
+
+The Chinese edition follows the same six-section, 20-question structure as the English edition:
+
+<Tabs>
+  <Tab title="发现机会 (Discovery)">
+    - 本周有哪些独立开发者产品发布？ — Which solo-founder products launched?
+    - 哪些搜索词本周出现异常飙升？ — Which search terms are surging?
+    - GitHub 上哪些快速增长的开源项目尚无商业化版本？ — Which fast-growing open-source projects lack a commercial version?
+    - 开发者在抱怨哪些工具？ — What tools are developers complaining about?
+  </Tab>
+  <Tab title="技术选型 (Tech Radar)">
+    - 本周有哪些主要公司关闭或降级了产品？ — Did any major company shut down or downgrade a product?
+    - 本周增长最快的开发者工具是什么？ — What are the fastest-growing developer tools?
+    - HuggingFace 上最热门的模型是什么？ — What are the hottest HuggingFace models?
+    - 本周最重要的开源 AI 进展是什么？ — What are the most important open-source AI developments?
+    - 本周最热门的 Show HN 项目使用了哪些技术栈？ — What tech stacks are Show HN projects using?
+  </Tab>
+  <Tab title="竞争情报 (Competitive Intel)">
+    - 独立开发者在讨论哪些收入和定价问题？ — What revenue and pricing discussions are happening?
+    - 有哪些沉寂已久的旧项目突然复活？ — Are any dormant old projects reviving?
+    - 本周有没有"XX 已死"或迁移类文章？ — Are there any "XX is dead" or migration articles?
+  </Tab>
+  <Tab title="趋势判断 (Trends)">
+    - 本周最频繁的技术关键词是什么？ — What are the most frequent tech keywords?
+    - VC 和 YC 目前在关注什么方向？ — What are VCs and YC focusing on?
+    - 哪些 AI 搜索词正在降温？ — Which AI search terms are cooling off?
+    - 新词雷达：哪些全新概念正在从零崛起？ — Which brand-new concepts are rising from zero?
+  </Tab>
+  <Tab title="行动触发 (Action)">
+    - 用今天的 2 小时或一整个周末，我应该做什么？ — What should I build today?
+    - 哪些定价和商业化模式值得研究？ — What pricing and monetization models are worth studying?
+    - 今日最反直觉的发现是什么？ — What is today's most counter-intuitive finding?
+    - Product Hunt 产品与开发者工具在哪里重叠？ — Where do Product Hunt products overlap with dev tools?
+  </Tab>
+</Tabs>
+
+## Sample: April 16, 2026 Chinese edition
+
+The April 16, 2026 Chinese report opens with this top-three summary:
+
+> **今日三大信号：**
+> 1. 谷歌向 ICE 移交数据引发自托管浪潮 —— vaultwarden、gitea、joplin 本周搜索量均创历史新高
+> 2. AI Agent 基础设施成为新一轮平台战 —— hermes-agent 一周斩获 5.3 万 GitHub star，"claude managed agents" 在 Google 趋势上飙升 +950%
+> 3. Cal.com 宣布闭源，引发 2026 年最激烈的开源许可讨论 —— 直接回应帖"开源并未死去"获 313 点赞
+
+The same edition's build recommendation (行动触发) for April 16 reads:
+
+> **最佳 2 小时构建**：**面向小型代理机构的开源社交媒体排程工具** —— 一个精简的排程工具，支持从单一仪表盘多平台发布，可部署在月租 $10 的 VPS 上。
+
+The Chinese edition also adds inline contextual notes not present in the English version. For example, after quoting a user whose files were unrecoverable from Backblaze, the report appends `（数据找不回来了）` — a plain-language summary for readers who may not have followed the original Hacker News thread.
+
+<Note>
+  The Chinese README section updates daily alongside the English section. The 中文版 badge at the top of the repository README always links to the current day's Chinese report.
+</Note>
+
+## How to follow the Chinese edition
+
+The Chinese edition is included in the same repository commit as the English edition, so any subscription method that works for English reports also delivers the Chinese edition:
+
+<CardGroup cols={2}>
+  <Card title="GitHub Watch" icon="github" href="/using/subscribe">
+    Watch the repository on GitHub to receive email notifications for both editions with each daily commit.
+  </Card>
+  <Card title="RSS / Atom feed" icon="rss" href="/using/rss-feed">
+    Subscribe to the Atom feed — each daily commit includes both `en/` and `zh/` files.
+  </Card>
+  <Card title="Latest report (English)" icon="newspaper" href="/archive/2026/april-16">
+    Read the April 16, 2026 English report in the archive.
+  </Card>
+  <Card title="Report structure" icon="list-check" href="/reports/overview">
+    Learn how the 20-question format works across both editions.
+  </Card>
+</CardGroup>

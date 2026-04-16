@@ -1,0 +1,92 @@
+---
+title: "Subscribe to BuilderPulse daily reports"
+description: "Follow BuilderPulse via GitHub Watch, RSS/Atom feed, or direct links to get notified the moment each new daily intelligence report publishes."
+---
+
+BuilderPulse publishes every morning as a commit to the [BuilderPulse GitHub repository](https://github.com/BuilderPulse/BuilderPulse). Because each report is a commit, you can use any GitHub or RSS-based workflow to get notified the moment a new report lands. There are three ways to follow: watch the repo on GitHub, subscribe via an RSS reader, or bookmark a direct link that always points to today's report.
+
+<Note>
+  Reports publish daily and are timestamped to Shanghai time. Each report appears as a commit to the `main` branch, so any notification method that watches for new commits will pick it up automatically.
+</Note>
+
+## Subscription methods
+
+<Tabs>
+  <Tab title="GitHub Watch">
+    GitHub Watch delivers an email to your inbox every time a new commit is pushed to the repository — which means every time a new daily report publishes.
+
+    <Steps>
+      <Step title="Open the repository">
+        Go to [github.com/BuilderPulse/BuilderPulse](https://github.com/BuilderPulse/BuilderPulse) in your browser.
+      </Step>
+      <Step title="Click Watch">
+        In the top-right area of the repository page, click the **Watch** button (the eye icon).
+      </Step>
+      <Step title="Select All Activity">
+        From the dropdown, choose **All Activity**. This ensures you receive a notification for every new commit, including each daily report.
+      </Step>
+      <Step title="Confirm your email settings">
+        Check your [GitHub notification settings](https://github.com/settings/notifications) to make sure email notifications are enabled for "Watching" repositories.
+      </Step>
+    </Steps>
+
+    <Tip>
+      If you find the email volume too high, use **Custom** in the Watch dropdown and enable only "Commits" to limit notifications to new reports.
+    </Tip>
+  </Tab>
+  <Tab title="RSS / Atom feed">
+    The GitHub Atom feed for the repository lets you subscribe to new commits in any RSS reader. Every new report appears as a feed item with the report headline as the title.
+
+    **Feed URL:**
+
+    ```text
+    https://github.com/BuilderPulse/BuilderPulse/commits/main.atom
+    ```
+
+    Copy this URL and paste it into your RSS reader of choice. Popular clients that work well include:
+
+    - **Feedly** — paste into the search bar on feedly.com
+    - **NetNewsWire** — use File → New Feed and paste the URL
+    - **Reeder** — add a new feed and paste the URL
+    - **Inoreader** — click the + button and paste the URL
+    - **FreshRSS** — use Subscriptions → Add a feed
+
+    For detailed setup steps for each reader, see the [RSS feed setup guide](/using/rss-feed).
+  </Tab>
+  <Tab title="Direct links">
+    If you prefer to check in manually, bookmark the README — it always links to the most recent report at the top of the page.
+
+    **Bookmark this URL:**
+
+    ```text
+    https://github.com/BuilderPulse/BuilderPulse
+    ```
+
+    The README is updated with every new report and shows:
+
+    - A direct link to today's full English report
+    - A direct link to today's Chinese edition (中文版)
+    - A "Last 7 days" section with headlines and links to the previous week's reports
+
+    You can also navigate the archive directly. English reports live at `en/YYYY/YYYY-MM-DD.md` and Chinese reports live at `zh/YYYY/YYYY-MM-DD.md` in the repository.
+  </Tab>
+</Tabs>
+
+## What each report contains
+
+Every daily report answers 20 structured questions across six sections: Discovery, Tech Radar, Competitive Intel, Trends, and Action. The report is cross-referenced from Hacker News, GitHub Trending, Product Hunt, HuggingFace, Google Trends, and Reddit — 300+ signals synthesized into one daily read.
+
+<CardGroup cols={2}>
+  <Card title="Report structure" icon="list-check" href="/reports/overview">
+    Learn what each of the 20 questions covers and how the report is organized.
+  </Card>
+  <Card title="Data sources" icon="database" href="/sources/overview">
+    See which platforms BuilderPulse monitors and how signals are weighted.
+  </Card>
+  <Card title="RSS feed setup" icon="rss" href="/using/rss-feed">
+    Detailed setup steps for every major RSS reader.
+  </Card>
+  <Card title="Chinese edition" icon="language" href="/using/chinese-edition">
+    Read about the Simplified Chinese edition published alongside each English report.
+  </Card>
+</CardGroup>

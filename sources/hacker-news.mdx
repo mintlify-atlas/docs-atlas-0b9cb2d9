@@ -1,0 +1,92 @@
+---
+title: "Hacker News signals: launches, complaints, and discussions"
+description: "BuilderPulse extracts Show HN launches, pain-point threads, and comment sentiment from HN — filtered by points, comment density, and community mood."
+---
+
+Hacker News is the most signal-dense platform BuilderPulse monitors. Every front-page post is a consensus vote by a technically sophisticated audience with a low tolerance for hype. A story that reaches 500 points didn't get there through paid promotion — it got there because hundreds of people independently decided it was worth their attention. That consensus is the signal.
+
+BuilderPulse reads HN daily and extracts three types of content: **Show HN launches** (solo founders shipping products), **Ask HN discussions** (pain points, tool comparisons, and "what are you working on" threads), and **front-page news** (industry shifts, product shutdowns, and trust failures that create builder opportunities).
+
+## What BuilderPulse tracks from HN
+
+<CardGroup cols={2}>
+  <Card title="Show HN launches" icon="rocket-launch">
+    Solo-founder product launches with point scores, comment counts, and the specific community feedback that reveals whether demand is real.
+  </Card>
+  <Card title="Ask HN threads" icon="circle-question">
+    Pain point discussions and tool comparisons — especially the "What Are You Working On?" monthly thread, which is a direct window into what builders are building.
+  </Card>
+  <Card title="Front-page complaints" icon="triangle-exclamation">
+    Developer frustration posts that signal market gaps — the higher the comment count, the more acute the pain.
+  </Card>
+  <Card title="Tech announcements" icon="bullhorn">
+    Company shutdowns, product downgrades, and platform changes that shift the competitive landscape overnight.
+  </Card>
+</CardGroup>
+
+## Point thresholds and what they mean
+
+HN points are votes, but their meaning changes at different scales. Here's how BuilderPulse interprets them:
+
+| Points | What it signals |
+|--------|----------------|
+| 50–150 | Solid niche interest — the idea resonates with a specific developer community |
+| 150–300 | Broad developer interest — the problem or product is widely recognized |
+| 300–600 | Major community event — this is a story people are forwarding to each other |
+| 600–1,200 | Rare cross-community consensus — both technical and business audiences engaged |
+| 1,200+ | Once-a-week territory — a story that defines the week's conversation |
+
+<Note>
+Comment count matters as much as point count. A 500-point post with 400 comments signals active debate and unmet needs. A 500-point post with 80 comments signals approval without friction. Both are valuable — but for different reasons.
+</Note>
+
+## Real examples from recent reports
+
+### Show HN launches worth studying
+
+**TracksSuccession** by @porsche959 scored 172 points and 63 comments. The product scrapes SEC filings to track CEO, CFO, and board changes at US public companies in real time. The comment from @thedougd — *"What would also be very interesting is a graph of relationships and movements"* — and @karmelapple's suggestion to add month-over-month comparison metrics are both free feature expansion signals. When HN commenters suggest features, they're describing what they'd pay for.
+
+**LangAlpha** by @zc2610 scored 144 points with 51 comments — described as "Claude Code but for Wall Street." An Apache 2.0 agent harness with persistent sandboxed workspaces and TradingView chart integration. The validator was @neomantra, who maintains a real OSS SDK for Databento market data: *"Having an API call drop a firehose of structured data into the context window was not very helpful."* That's a domain expert confirming the core thesis.
+
+**boringBar** by @a-ve scored 280–512 points (the thread ran across multiple report days) with 165–296 comments. The macOS dock replacement's pricing discussion revealed a structural insight: subscription pricing for utility software is rejected almost universally by the HN audience. The founder pivoted to a $40 perpetual license mid-thread and the response shifted from criticism to support.
+
+### Pain point threads with high opportunity signal
+
+**Claude Code quota exhaustion** — "Pro Max 5x quota exhausted in 1.5 hours despite moderate usage" scored 558–731 points across two report cycles with 510–644 comments. Developer paying $200/month for Pro Max is burning through quota in 90 minutes. That's a monitoring/budget tool waiting to be built, and the audience is in the GitHub issues thread right now.
+
+**Backblaze backup failures** — 1,103 points and 668 comments on the discovery that Backblaze silently excluded OneDrive, Dropbox, and VeraCrypt folders. @mcherm summarized the community sentiment: *"Trust is somewhat difficult to earn, but easy to lose and nearly IMPOSSIBLE to regain."* The comment count (668) is the highest BuilderPulse recorded that week — indicating acute, widely-shared pain.
+
+**Google/ICE data disclosure** — 1,152 points and 507 comments triggered a migration wave visible in Google Trends: vaultwarden hit Breakout status, gitea surged +300%, joplin +250%. HN discussions create Google searches — tracking both simultaneously shows you the size of the audience that's ready to act.
+
+<Tip>
+When an HN pain-point post exceeds 500 comments, search Google Trends for the product name within 48 hours. The HN discussion often precedes a search surge by 1–2 days — giving you a window to publish relevant content before the search traffic peaks.
+</Tip>
+
+## How to interpret Show HN comment sections
+
+The comments on a Show HN post are structured market research. BuilderPulse reads them for four signal types:
+
+<AccordionGroup>
+  <Accordion title="Feature requests disguised as questions">
+    *"What would also be very interesting is..."* — this is a request, not a question. When multiple commenters ask for the same thing, that's your next feature. The TracksSuccession thread surfaced relationship graphs and month-over-month comparisons as two independent requests.
+  </Accordion>
+  <Accordion title="Pricing resistance signals">
+    The boringBar thread is the canonical example. When a substantial fraction of comments address pricing (not features, not bugs — pricing), you have a pricing mismatch, not a product problem. The solution in that case was structural: utility software requires perpetual licensing.
+  </Accordion>
+  <Accordion title="Domain expert validation">
+    HN attracts practitioners. When someone with relevant real-world experience validates the core insight — like @neomantra confirming LangAlpha's thesis from their experience with market data APIs — that's higher-quality validation than general enthusiasm.
+  </Accordion>
+  <Accordion title="Alternative suggestions">
+    When commenters suggest competitors or existing tools, they're telling you what the competitive landscape looks like. If they can't name a strong alternative, the gap is real.
+  </Accordion>
+</AccordionGroup>
+
+## The "Best stories" list
+
+BuilderPulse specifically watches for stories that appear in HN's "Best" list — a separate feed of stories with the highest engagement relative to their age. Appearing in Best is a stronger signal than simply reaching the front page, because it indicates sustained engagement rather than a single traffic spike.
+
+In the April 13–16 reports, the **"What Are You Working On? (April 2026)"** thread scored 341 points with 1,153 comments — the largest Ask HN thread of the month. This thread alone gives you a direct pipeline view of what builders are actively shipping, what stacks they're using, and what problems they're trying to solve.
+
+<Info>
+BuilderPulse cross-references every HN story with the same week's Google Trends, GitHub Trending, and Product Hunt data. A story that appears on all four platforms in the same week is a tier-1 signal. See the [sources overview](/sources/overview) for how cross-validation works.
+</Info>
